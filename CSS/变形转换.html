@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变形转换</title>
+    <style>
+        section {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: 1s;
+            border: 1px solid black;
+        }
+
+        /* 变形 */
+        section:nth-child(1) {
+            background-color: tomato;
+        }
+
+        section:nth-child(1):hover {
+            transform: translateX(100px);
+            transform: rotateZ(180deg);
+            transform: scale(.5);
+            transform: skewX(30deg);
+        }
+
+        section:nth-child(2) {
+            background-color: rgb(71, 255, 209);
+        }
+
+        section:nth-child(2):hover {
+            transform: translateY(-30px);
+            transform: rotateX(-180deg);
+            transform: scale(1.5);
+            transform: skewY(30deg);
+        }
+
+        section:nth-child(3) {
+            background-color: rgb(71, 172, 255);
+        }
+
+        section:nth-child(3):hover {
+            transform: translate(50px, 100px);
+            transform: rotateY(180deg);
+            transform: scaleX(.6);
+            transform: skew(30deg, 30deg);
+        }
+
+        section:nth-child(4) {
+            background-color: rgb(151, 71, 255);
+        }
+
+        section:nth-child(4):hover {
+            transform: translate(-20px, 50px);
+            transform: rotate(-1080deg);
+            transform: scale(0.3);
+            /* transform: skew(-30deg,-30sdeg); */
+        }
+
+
+        section article {
+            width: 200px;
+            height: 200px;
+            transition: 1s;
+        }
+
+        /* 3D样式 */
+        section:nth-child(5) {
+            background: blueviolet;
+            transform-style: flat;
+        }
+
+        section:nth-child(5) article {
+            background: violet;
+        }
+
+        section:nth-child(5) article:hover {
+            transform: rotateX(45deg) rotateY(30deg);
+        }
+
+        section:nth-child(6) {
+            background: chocolate;
+            transform-style: preserve-3d;
+        }
+
+        section:nth-child(6) article {
+            background: cornsilk;
+        }
+
+        section:nth-child(6) article:hover {
+            transform: rotateX(45deg) rotateY(30deg);
+        }
+
+        /* 3D透视 */
+
+        section:nth-child(n+7) article {
+            transform: rotateY(45deg);
+            opacity: 0.9;
+        }
+
+        section:nth-child(7) {
+            -webkit-perspective: 0;
+        }
+
+        section:nth-child(7) article {
+            background-color: red;
+        }
+
+        section:nth-child(8) {
+            -webkit-perspective: 200;
+        }
+
+        section:nth-child(8) article {
+            background-color: burlywood;
+        }
+
+        section:nth-child(9) {
+            -webkit-perspective: 400;
+        }
+
+        section:nth-child(9) article {
+            background-color: royalblue;
+        }
+
+        section:nth-child(10) {
+            -webkit-perspective: 1000;
+        }
+
+        section:nth-child(10) article {
+            background-color: lightcoral;
+        }
+
+        section:nth-child(11) {
+            -webkit-perspective: 300;
+            -webkit-perspective-origin: 50% 50%;
+        }
+
+        section:nth-child(11) article {
+            background-color: lightcoral;
+        }
+
+        section:nth-child(12) {
+            -webkit-perspective: 300;
+            -webkit-perspective-origin: left top;
+        }
+
+        section:nth-child(12) article {
+            background-color: royalblue;
+        }
+
+        section:nth-child(13) {
+            -webkit-perspective: 300;
+            -webkit-perspective-origin: 50px 40px;
+        }
+
+        section:nth-child(13) article {
+            background-color: burlywood;
+        }
+
+        section:nth-child(14) {
+            -webkit-perspective: 300;
+            -webkit-perspective-origin: 100% 100%;
+        }
+
+        section:nth-child(14) article {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+        <section>4</section>
+        <section>
+            <article>5</article>
+        </section>
+        <section>
+            <article>6</article>
+        </section>
+        <section>
+            <article>7</article>
+        </section>
+        <section>
+            <article>8</article>
+        </section>
+        <section>
+            <article>9</article>
+        </section>
+        <section>
+            <article>0</article>
+        </section>
+        <section>
+            <article>11</article>
+        </section>
+        <section>
+            <article>12</article>
+        </section>
+        <section>
+            <article>13</article>
+        </section>
+        <section>
+            <article>14</article>
+        </section>
+    </div>
+</body>
+
+</html>

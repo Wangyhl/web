@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生js实现轮播图效果</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            text-align: center;
+            border-bottom: 5px solid rgb(153, 9, 9);
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container img {
+            width: 100%;
+            opacity: 0;
+            transition: all .5s linear;
+        }
+
+        .container img.show {
+            opacity: 1;
+        }
+        /* 除第一张图片以外的所有图片进行绝对定位，让第一张图片撑起容器高度 */
+        .container img:not(:first-child) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container .btn {
+            width: 45px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-size: contain !important;
+        }
+
+        .container .prev {
+            left: 10px;
+            background: url("../img/arr_left.png") no-repeat center center;
+        }
+
+        .container .next {
+            right: 10px;
+            background: url("../img/arr_right.png") no-repeat center center;
+        }
+
+        .container .idots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container .idot {
+            width: 12px;
+            height: 12px;
+            background-color: purple;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 8px;
+            cursor: pointer;
+            opacity: .75;
+        }
+
+        .container .idot.sel {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>渐进渐出</h1>
+    <!-- 轮播图容器 -->
+    <div class="container">
+        <!-- 图片显示区域 -->
+        <div class="imgs">
+            <!-- emmet语法 -->
+            <!-- img[src="../img/$$.jpg" alt=""]*6 -->
+            <img src="../img/01.jpg" alt="" class="show">
+            <img src="../img/02.jpg" alt="">
+            <img src="../img/03.jpg" alt="">
+            <img src="../img/04.jpg" alt="">
+            <img src="../img/05.jpg" alt="">
+            <img src="../img/06.jpg" alt="">
+        </div>
+        <!-- 按钮显示区域 -->
+        <div class="btns">
+            <section class="btn prev"></section>
+            <section class="btn next"></section>
+        </div>
+        <!-- 小圆点显示区域 -->
+        <div class="idots">
+            <section class="idot sel"></section>
+            <section class="idot"></section>
+            <section class="idot"></section>
+            <section class="idot"></section>
+            <section class="idot"></section>
+            <section class="idot"></section>
+        </div>
+    </div>
+    <script src="../js/flash.js"></script>
+</body>
+</html>

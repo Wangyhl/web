@@ -1,0 +1,74 @@
+.box {
+    width: 1226px;
+    height: 614px;
+    background: rgb(181, 234, 238);
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 234px;
+    background: chocolate;
+}
+
+.right {
+    width: 978px;
+    background: cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.item {
+    width: 234px;
+    height: 300px;
+    background: crimson;
+}
+
+/* 第二波 */
+.box2 {
+    width: 1200px;
+    height: 614px;
+    background: black;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    align-content: center;
+}
+
+.list {
+    width: 200px;
+    height: 200px;
+    background: blanchedalmond;
+    /* margin: 10px; */
+    /* flex-grow: 1; */
+}
+
+/* .o1 {
+    order: 3;
+    flex-grow: 2;
+}
+
+.o2 {
+    order: 5;
+    flex-shrink: 0;
+}
+
+.o3 {
+    order: 2;
+    flex-basis: 400px;
+    align-self: center;
+}
+
+.o4 {
+    order: 1;
+    align-self: flex-end;
+}
+
+.o5  {
+    order: 4;
+    align-self: center;
+} */
+

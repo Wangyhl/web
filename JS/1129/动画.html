@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .box {
+            height: 850px;
+            text-align: center;
+            outline: solid rebeccapurple;
+            margin-top: 50px;
+        }
+
+        .img {
+            animation-play-state: paused;
+        }
+
+        .run {
+            animation-play-state: running !important;
+        }
+
+        .img2 {
+            margin: 200px auto;
+        }
+    </style>
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/zyl2.jpg" alt="" class="img animated slideInLeft img2">
+    </div>
+    <div class="box">
+        <img src="img/zyl.jpg" alt="" class="img animated fadeInRight">
+    </div>
+
+    <script>
+        let img = document.querySelectorAll(".img");
+        let animationNum = -100;
+
+        window.onscroll = function (e) {
+            img.forEach(function (el) {
+                if ((innerHeight - (el.offsetTop - scrollY) - el.offsetHeight) >= animationNum) {
+                    el.classList.add("run")
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

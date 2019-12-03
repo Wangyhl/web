@@ -1,0 +1,62 @@
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#box {
+    width: 800px;
+    /* width: 50%; */
+    /* border: 1px solid black; */
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#lbt {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+    /* width: 4000px; */
+}
+
+li {
+    /* width: 800px; */
+    float: left;
+}
+
+li img {
+    width: 100%;
+}
+
+.num {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.num span {
+    display: inline-block;
+    background-color: coral;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+/* .num span:hover {
+    background-color: rgb(255, 68, 0);
+    opacity: 1;
+} */
+
+.color {
+    background-color: rgb(255, 68, 0) !important;
+    opacity: 1 !important;
+}

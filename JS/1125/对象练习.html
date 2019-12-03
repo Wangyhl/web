@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象练习</title>
+</head>
+<body>
+    <script>
+        function Hero(heroData){
+            for (key in heroData){
+                this[key] = heroData[key];
+            }
+            this._hp = heroData.hp;
+            Object.defineProperties(this,{
+                hp:{
+                    get:function(){
+                        return this._hp;
+                    },
+                    set:function(value){
+                        if(value < 0){
+                            this._hp = 0;
+                        }else{
+                            this._hp = value;
+                        }
+                    }
+                }
+            })
+        }
+
+        //攻击
+        Hero.prototype.attack = function(otherHero){
+            if(otherHero.hp <= 0){
+                console.log(`${otherHero.name}已经死了，不要再鞭尸了`);
+                return
+            }
+            this.say();
+            otherHero.hp -= this.gjl;
+            console.log(`${this.name}打了${otherHero.name}一下，${otherHero.name}掉了${this.gjl}滴血`);
+        }
+
+        //随机喊话
+        Hero.prototype.say = function(){
+            function sayRound(arr){
+                var sayIndex = Math.round(Math.random()*(arr.length-1));
+                return arr[sayIndex];
+            }
+            console.log(sayRound(this.ks));
+        }
+
+        var ysData = {
+            name:"亚索",
+            nc:"快乐风男",
+            ks:['哈萨给','死亡如风，常伴吾生'],
+            hp:100,
+            mp:0,
+            gjl:60,
+            skill:['q','w'],
+            position:['中路']
+        }
+        var xzData = {
+            name:"李青",
+            nc:"瞎子",
+            ks:['衣裤','我用双手成就你的梦想'],
+            hp:120,
+            mp:0,
+            gjl:70,
+            skill:["q",'w'],
+            position:['打野']
+        }
+
+        var zxData = {
+            name:"赵新",
+            nc:"菊花信",
+            ks:['长枪依在，菊花拿来','万军丛中取敌将首级'],
+            hp:120,
+            mp:0,
+            gjl:75,
+            skill:["q",'w'],
+            position:['打野']
+        }
+
+        let ys = new Hero(ysData);
+        let xz = new Hero(xzData);
+        let zx = new Hero(zxData);
+    </script>
+</body>
+</html>

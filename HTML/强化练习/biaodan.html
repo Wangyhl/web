@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>biaodan1</title>
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid rgb(206, 202, 202);
+        }
+
+        .yanse {
+            background: rgb(210, 248, 171);
+            width: 100px;
+            text-align: center;
+        }
+
+        select {
+            width: 171px;
+            border: 1px solid rgb(193, 245, 141);
+        }
+
+        input {
+            border: 1px solid rgb(193, 245, 141);
+        }
+
+        textarea {
+            width: 430px;
+            border: 1px solid rgb(193, 245, 141);
+        }
+
+        #biao {
+            width: 600px;
+            height: 240px;
+            background: rgb(253, 251, 251);
+        }
+
+        #foot {
+            display: inline-block;
+            width: 600px;
+            height: 30px;
+            text-align: right;
+            margin: 30px 0 0 0;
+            background: rgb(240, 237, 237);
+            /* border: 1px solid rgb(193, 245, 141); */
+        }
+
+        button {
+            background: rgb(132, 202, 132);
+            width: 75px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="biao">
+        <form>
+            <table>
+                <tr>
+                    <td class="yanse">
+                        <label>姓&emsp;&emsp;名</label>
+                    </td>
+                    <td>
+                        <input name="user" type="text" required />
+                    </td>
+                    <td class="yanse">
+                        <label>性&emsp;&emsp;别</label>
+                    </td>
+                    <td>
+                        <select>
+                            <option>男</option>
+                            <option>女</option>
+                            <option>保密</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>手机号码</label>
+                    </td>
+                    <td>
+                        <input name="pass" type="password" required />
+                    </td>
+                    <td class="yanse">
+                        <label>电子邮箱</label>
+                    </td>
+                    <td>
+                        <input name="email" type="email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>教育程度</label>
+                    </td>
+                    <td>
+                        <input name="jiaoyu" type="text" required />
+                    </td>
+                    <td class="yanse">
+                        <label>工作职位</label>
+                    </td>
+                    <td>
+                        <input name="work" type="text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>工作城市</label>
+                    </td>
+                    <td>
+                        <input name="city" type="text" required />
+                    </td>
+                    <td class="yanse">
+                        <label>期望工资</label>
+                    </td>
+                    <td>
+                        <input name="money" type="number" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>自我介绍</label>
+                    </td>
+                    <td colspan="3">
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>特&emsp;&emsp;长</label>
+                    </td>
+                    <td colspan="3">
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="yanse">
+                        <label>地&emsp;&emsp;址</label>
+                    </td>
+                    <td colspan="3">
+                        <textarea></textarea>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="foot">
+        <button type="submit">添加</button>
+        <button type="reset">关闭</button>
+    </div>
+</body>
+
+</html>

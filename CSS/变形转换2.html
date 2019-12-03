@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变形</title>
+    <style>
+        .box {
+            width: 256px;
+            height: 329px;
+            overflow: hidden;
+        }
+
+        .box img{
+            width: 256px;
+            height: 329px;
+            transition: all 2s;
+        }
+
+        .box img:hover {
+            transform: rotateZ(360deg) scale(1.1);
+        }
+
+        /* .b1:hover {
+            background-image: url(http://www.517lppz.com/media/upload/L/a1.jpg);
+        } */
+
+        .b2 {
+            background-color: brown;
+            transition: all 1.5s;
+        }
+
+        .b2:hover {
+            transform: rotateZ(180deg);
+            background-color: burlywood;
+        }
+
+        .b3 {
+            background-image: url(http://www.517lppz.com/media/upload/L/a5.jpg);
+            transition: all 2s;
+        }
+
+        .b3:hover  {
+            transform: rotateZ(360deg) scale(1.1);
+            background-image: url(http://www.517lppz.com/media/upload/L/a1.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box b1">
+        <img src="http://www.517lppz.com/media/upload/L/a5.jpg" alt="">
+    </div>
+    <div class="box b2">张云雷</div>
+    <div class="box b3"></div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高级选择器</title>
+
+    <style>
+        .p1::first-letter {
+            background: gray;
+        }
+
+        .p1::first-line {
+            text-decoration: underline;
+        }
+
+        .p2::before {
+            content: attr(title);
+            /* content: 'befor的插入 '; */
+            color: indianred;
+        }
+
+        .p2::after {
+            content: url(./img/验证码.png);
+        }
+
+        .item:first-child {
+            color: red;
+        }
+
+        /* ul :first-child {
+        color: red;
+    } */
+
+        .main li:last-child {
+            color: rosybrown;
+        }
+
+        /* ul>li:last-child {
+        color: rosybrown;
+    } */
+
+        .wrap p:first-of-type {
+            color: salmon;
+            font: x-large "华文行楷";
+        }
+
+        .wrap p:last-of-type {
+            color: seagreen;
+            font: x-large "华文彩云";
+        }
+
+        .wrap p:only-child {
+            color: slateblue;
+            font: x-large "黑体";
+        }
+
+        .wrap p:only-of-type {
+            color: slategrey;
+            font: x-large "华文行楷";
+        }
+
+        section div.ch:nth-child(1) {
+            color: steelblue;
+        }
+
+        section div.ch:nth-child(odd) {
+            color: steelblue;
+        }
+
+        section div.ch:nth-child(even) {
+            color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+    <p class="p2" title="一个憨憨">百度</p>
+    <ul class="main">
+        <li class="item">项目1</li>
+        <li class="item">项目2</li>
+        <ul>
+            <li>子项目</li>
+            <li>子项目</li>
+            <li>子项目</li>
+        </ul>
+        <li class="item">项目3</li>
+        <li class="item">项目4</li>
+        <li class="item">项目5</li>
+        <li class="item">项目6</li>
+        <li class="item">项目7</li>
+        <li class="item">项目8</li>
+    </ul>
+    <div class="wrap">
+        <section>
+            <h3>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</h3>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+        </section>
+        <hr>
+        <article>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+            <h3>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</h3>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+        </article>
+        <hr>
+        <div>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+        </div>
+        <hr>
+        <div>
+            <p>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</p>
+            <span>终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</span>
+        </div>
+    </div>
+    <hr>
+    <section>
+        <div class="ch">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</div>
+        <div class="ch">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</div>
+        <div class="ch">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</div>
+        <div class="ch">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</div>
+        <div class="ch">终于我们也看到了花团锦簇，知道了彩灯佳话，那一夜，我也曾梦见百万雄兵</div>
+    </section>
+</body>
+
+</html>

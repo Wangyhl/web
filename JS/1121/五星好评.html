@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五星好评</title>
+    <style>
+        #star {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #star span,#star p {
+            float: left;
+            font-size: 14px;
+            color: #666;
+            margin: 0 5px;
+        }
+        #lag span {
+            color: orange;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 10px;
+            height: 21px;
+            overflow: hidden;
+            float: left;
+            direction: rtl;
+        }
+        li {
+            display: inline-block;
+            /* float: left; */
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        li:hover::before,li:hover ~ li::before{
+            content: url(img/star.png);
+            transform: translateY(-28px);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="star">
+        <span>点击星星进行评分</span>
+        <ul>
+            <li><a href=""><img src="img/star.png" alt=""></a></li>
+            <li><a href=""><img src="img/star.png" alt=""></a></li>
+            <li><a href=""><img src="img/star.png" alt=""></a></li>
+            <li><a href=""><img src="img/star.png" alt=""></a></li>
+            <li><a href=""><img src="img/star.png" alt=""></a></li>
+        </ul>
+        <span>1分</span>
+        <p>差得太离谱，与卖家描述的严重不符，非常不满意</p>
+        <div id ="lag">
+            <p>
+                <span>1分 非常不满意</span>
+                差得太离谱，与卖家描述的严重不符，非常不满意
+            </p>
+        </div>
+    </div>
+</body>
+</html>

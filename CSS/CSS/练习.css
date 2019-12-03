@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background-color: #F5F5F5;
+}
+
+.all {
+    width: 1226px;
+    height: 614px;
+    background-color: #F5F5F5;
+    margin: 20px auto;
+    font-size: 0;
+}
+
+.line{
+    display: inline-block;
+}
+
+.left {
+    width: 234px;
+    height: 614px;
+    margin-right: 14px;
+}
+
+.right {
+    width: 978px;
+    height: 614px;
+    vertical-align: top;
+}
+
+.list {
+    display: inline-block;
+    width: 234px;
+    height: 300px;
+    background-color: white;
+    margin-right: 14px;
+    vertical-align: top;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.last {
+    margin-right: 0;
+}
+
+.top {
+    margin-top: 14px;
+}
+
+.list img {
+    width: 160px;
+}
+
+.list h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.list .p1 {
+    height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list .p2 {
+    color: #ff6700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fd:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    /* 以自身为基准向上移动2px */
+    transform: translateY(-2px);
+    /* 设置动画过渡时间 */
+    transition: all 0.4s;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基线</title>
+    <style>
+        .parent {
+            height: 20rem;
+            border: 0.05rem solid;
+        }
+
+        .parent div {
+            display: inline-block;
+        }
+
+        .parent div:nth-child(1){
+            width: 10rem;
+            /* height: 10rem; */
+            border: 0.05rem solid red;
+            /* overflow: hidden; */
+
+            /* vertical-align: middle; */
+
+            /* vertical-align: text-top; */
+            vertical-align: sub;
+        }
+        button {
+            height: 100px;
+            /* width: 50px; */
+            /* vertical-align: bottom; */
+            /* text-align: right; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- <div>xp</div>hello -->
+        <!-- <div>xp<button>btn</button>world</div>hello -->
+        <div>
+            world
+            <button></button>
+        </div>
+        hello<sub>下标</sub>
+    </div>
+</body>
+</html>

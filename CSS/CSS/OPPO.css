@@ -1,0 +1,136 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .top {
+    background-image: url(https://dsfs.oppo.com/archives/201910/201910101010005d9e9a7837e46.jpg?x-oss-process=image/format,webp);
+} */
+
+.middle {
+    width: 70%;
+    margin: 0 auto;
+}
+/* ---------header------- */
+
+header .head {
+    height: 60px;
+    /* background: rosybrown; */
+}
+
+header {
+    height: 700px;
+    background-image: url(https://dsfs.oppo.com/archives/201910/201910101010005d9e9a7837e46.jpg?x-oss-process=image/format,webp);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1590px auto;
+    /* background-color: saddlebrown; */
+}
+
+.headbar {
+    height: 60px;
+    float: left;
+    line-height: 60px;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.menu ul li{
+    float: left;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 10px;
+}
+
+.menu li a:hover{
+    color:rgba(51, 51, 51,0.6);;
+}
+
+.img1{
+    /* display: block; */
+    float: right;
+    width: 30px;
+    position: relative;
+    top: 15px;
+}
+
+.banner {
+    height: 630px;
+}
+
+.banner a {
+    display: block;
+    width: 100%;
+    height: 630px;
+}
+
+/* -----------主体部分--------------- */
+main section {
+    width: 49.8%;
+    position: relative;
+}
+
+main section:nth-child(2n+1){
+    float: left;
+}
+
+main section:nth-child(2n){
+    float: right;
+}
+
+main section:nth-child(n+3){
+    margin-top: 0.4%;
+}
+
+main section img {
+    width: 100%;
+    height: 100%;
+}
+
+main .title {
+    position: absolute;
+    color: white;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 30px;
+}
+
+/* ----------footer部分----------- */
+footer {
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.lest {
+    width: 70%;
+    margin: 0 auto;
+    clear: both;
+}
+
+.lest ul {
+    /* width: 80%; */
+    float: left;
+    color: rgb(105, 102, 102);
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+div .list {
+    margin-left: 0;
+}
+
+.lest ul li {
+    padding: 10px;
+}

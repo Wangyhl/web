@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户信息</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            background-color: blanchedalmond;
+            margin: 10px auto;
+            text-align: center;
+            border: 1px solid rgb(206, 206, 206);
+        }
+        .ipt {
+            width: 600px;
+            height: 50px;
+            /* border: 1px solid rgb(55, 50, 61); */
+            margin: 5px auto;
+            line-height: 50px;
+        }
+        label{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 8. 用户信息脱敏。写一个表格，包含三个输入字段，姓名，电话码号，邮箱。然后在最后显示用户信息脱名以后的信息。
+        要求：
+        - 姓名第二个字用*覆盖
+        - 电话号码中间四位用*覆盖，电话号码输入支持全数字和-连接方式，如189-1234-1234/18912341234都合法。
+        - 邮箱@前面的所有内容*覆盖，且*个数和@前的字符串数量相等
+        - 在输入信息的前后有空格会被系统默认删除
+
+        例如用户输，姓名：李大锤，电话号码：189-1234-1234，邮箱：pony@qq.com。
+        输出，姓名：李*锤，电话号码：189****1234，邮箱：****@qq.com -->
+    <div class="box">
+        <div class="ipt">
+            <label for="in-str">姓名：</label>
+            <input type="text" id="in-str">
+            <input type="text" id="out-str">
+        </div>
+        <div class="ipt">
+            <label for="in-num">联系方式：</label>
+            <input type="text" id="in-num">
+            <input type="text" id="out-num">
+        </div>
+        <div class="ipt">
+            <label for="in-ema">邮箱：</label>
+            <input type="text" id="in-ema">
+            <input type="text" id="out-ema">
+        </div>
+        <!-- <button id="out-btn">点我</button> -->
+    </div>
+    <!-- <div class="box">
+        <div class="ipt">
+            <label for="out-str">姓名：</label>
+            <input type="text" id="out-str">
+        </div>
+        <div class="ipt">
+            <label for="out-num">联系方式：</label>
+            <input type="text" id="out-num">
+        </div>
+        <div class="ipt">
+            <label for="out-ema">邮箱：</label>
+            <input type="text" id="out-ema">
+        </div>
+    </div> -->
+    <script src="js/用户信息.js"></script>
+</body>
+
+</html>

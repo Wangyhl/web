@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    height: 60px;
+    background: rgb(75, 73, 73);
+}
+
+/* 一级菜单 */
+.one {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.one>li {
+    float: left;
+}
+
+.one>li a {
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+    color: rgb(185, 180, 180);
+    /* background: rgb(56, 50, 49); */
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    border-left: 1px solid transparent;
+}
+
+.one li a:hover {
+    border-left: 1px solid tomato;
+    color: white;
+    background: rgb(235, 143, 126);
+}
+
+/* 二级菜单 */
+.two {
+    display: none;
+    background: rgb(75, 73, 73);
+}
+
+.one li:hover .two {
+    display: block;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box</title>
+    <style>
+        .d1 {
+            width: 3rem;
+            height: 3rem;
+            /* background-color: green; */
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 20px;
+            resize: both;
+            /* resize: horizontal; 水平 */
+            /* resize: vertical; 垂直 */
+            overflow: hidden;
+            box-shadow: 5px 0px 15px 5px green inset;
+        }
+
+        .d2 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            border-top-left-radius: 300px 300px;
+            border-bottom-right-radius: 300px 300px;
+        }
+
+        .d3 {
+            width: 605px;
+            height: 605px;
+            border: 2px solid red;
+        }
+
+        .d4 {
+            /* display: inline-block; */
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            float: right;
+            position: relative;
+            bottom: 304px;
+            /* vertical-align: top; */
+            border-top-right-radius: 300px 300px;
+            border-bottom-left-radius: 300px 300px;
+        }
+
+        .d5 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            border-bottom-left-radius: 300px 300px;
+            border-top-right-radius: 300px 300px;
+        }
+
+        .d6 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            float: right;
+            position: relative;
+            bottom: 304px;
+            border-bottom-right-radius: 300px 300px;
+            border-top-left-radius: 300px 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">hello world</div>
+    <div class="d3">
+        <div class="d2"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+        <div class="d6"></div>
+    </div>
+</body>
+
+</html>

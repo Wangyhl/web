@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        //属性
+        var r = /abc/igm;
+        //ignoreCase：返回一个布尔值，表示是否设置了i修饰符，用于 忽略大小写
+        console.log(r.ignoreCase);
+        // global：返回一个布尔值，表示是否设置了g修饰符，用于 全局匹配
+        console.log(r.global);
+        // multiline：返回一个布尔值，表示是否设置了m修饰符，用于 多行模式匹配
+        console.log(r.multiline);
+
+        //方法
+        //test()
+        //检测字符串是否包含“@”
+        /@/.test('lihy_online@163.com');
+
+        //exec()
+        var c = /china/.exec("Hello,china!");
+        console.log(c);
+
+        //字符串对象的方法
+        //match()返回一个数组，成员是所有匹配的子字符串。
+        var match = "hello".match(/l/g);
+        console.log(match)
+
+        //search()按照给定的正则表达式进行搜索，返回一个整数，表示匹配开始的位置。
+        var search = "曾经沧海难为水，留取丹心照汗青。".search(/沧海/);
+        console.log(search)
+    </script>
+</body>
+</html>

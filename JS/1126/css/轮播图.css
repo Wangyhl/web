@@ -1,0 +1,54 @@
+img {
+    width: 800px;
+}
+
+#lbt {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+}
+
+li {
+    width: 800px;
+    height: 333px;
+}
+
+#box {
+    width: 800px;
+    height: 333px;
+    border: 1px solid black;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#num {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#num span {
+    display: inline-block;
+    background-color: coral;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* #num span:hover {
+    background-color: rgb(255, 68, 0);
+    opacity: 1;
+} */
+
+.color {
+    background-color: rgb(255, 68, 0) !important;
+    opacity: 1 !important;
+}

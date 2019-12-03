@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        //定义参数
+        function sum(x,y){
+            return x+y;
+        }
+        var res = sum(5,9);
+        console.log(res);
+
+        //形参与实参
+        // var x = 0;//实参
+        function test(n){
+            return ++n;
+        }
+        test();
+
+        //默认值
+        function print(a,b){
+            a = a || "他死了";
+            b = b == undefined ? "他死了" : b;
+            // return [a,b];
+            console.log(a);
+            console.log(b);
+        }
+        print("","张三");
+        //ES6写法
+        function print2(c = "没得这个人"){
+            console.log(c);
+        }
+        print2()
+
+        //arguments对象
+        function arg(){
+            var res1 = 0;
+            Array.from(arguments).forEach(function(el){
+                res1 += el;
+            })
+            return res1;
+        }
+        var res2 = arg(2,3,1,5,7);
+
+        //array.splice(idx,cout....)
+        function arg2(x,y){
+            var res3 = x*y;
+            var sum = 0;
+            for(var i = 2;i < arguments.length-2;i++){
+                sum += arguments[i];
+            }
+            var chu = arguments[arguments.length-2] / arguments[arguments.length-1];
+            console.log(sum);
+            console.log(chu);
+            return res3 + sum + chu;
+        }
+        var ret = arg2(1,2,4,3,6,9,3);
+        console.log(ret);
+
+        //值传递与地址传递
+        //值传递
+        var m = 3;
+        function text(n){
+            return n = 9;
+            // console.log(m,n)
+        }
+        text(m)
+        //地址传递
+        var add = {name:"张三",major:"软件技术"}
+        function text2(obj){
+            obj.major = "软件工程"
+        }
+        text2(add);
+
+        var num = [1,2]
+        function text3(arr){
+            arr.push(3);
+        }
+        text3(num);
+
+        //函数返回值
+            //未设置return
+        function ret2(){
+            console.log("张云雷");
+        }
+        ret2();
+            //设置return
+        function ret3(){
+            return "杨九郎"
+        }
+        ret3();
+    </script>
+</body>
+</html>

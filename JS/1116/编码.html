@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编码</title>
+</head>
+<body>
+    <script>
+        //随机输出四个字母作为验证码
+        //1、根据字母的asc码范围进行随机
+        //2、把随机数转换为字符串，通过循环拼接字符串
+        // function aroundNum(x,y){
+        //     return Math.round(Math.random()*(y-x))+x;
+        // }
+        // function bigNum(){
+        //     var letterArr = "";
+        //     for(n = 1;n <= 62;n++){
+        //         if(n <= 26){
+        //             var num = n + 96;
+        //             letterArr += num += " ";
+        //             // console.log(letterArr);
+        //         }else if(n <= 52){
+        //             var num = n + 65 - 27;
+        //             letterArr += num += " ";
+        //             // console.log(num);
+        //         }else{
+        //             var num = n-5;
+        //             letterArr += num += " ";
+        //             // console.log(num);
+        //         }
+        //     }
+
+        //     var yzm = "";
+        //     for(i = 1;i <=4;i++){
+        //         var letterArrNum = letterArr.split(" ");
+        //         // console.log(letterArrNum);
+        //         var letterNum = Math.round(Math.random()*(letterArrNum.length-2));
+        //         console.log(letterNum);
+        //         var letter = letterArrNum[letterNum];
+        //         console.log(letter);
+        //         var outLetter = String.fromCharCode(letter);
+        //         yzm += outLetter;
+        //     }
+        //     console.log("验证码："+yzm);
+        // }
+        // bigNum();
+
+        function smallNum(){
+            var yzm = "";
+            for(i = 1;i <= 4;i++){
+                var letterNum = Math.round(Math.random()*61+1);
+                var num;
+                if(letterNum <= 26){
+                    num = letterNum + 96;
+                }else if(letterNum <= 52){
+                    num = letterNum + 38;
+                }else{
+                    num = letterNum - 5;
+                }
+                yzm += String.fromCharCode(num);
+            }
+            console.log("验证码："+yzm);
+        }
+        smallNum();
+
+    </script>
+</body>
+</html>

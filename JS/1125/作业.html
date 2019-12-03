@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+</head>
+
+<body>
+    <script>
+        // 1.分别用原始模式，工厂模式，构造函数模式创建一个盒子对象。要求如下
+        // (1)对象有以下属性：宽度(数字类型，默认单位为cm)，高度(同宽度)，背景颜色，位置。长度单位可选mm（毫米）,cm(厘米)，dm(分米),m(米)
+        // (2)盒子对象的宽度，高度可设置带长度单位的字符串，对象会自动转换成cm。如:设置box.width='1.2m'，获取box.width返回不带单位的数字120，也可直接设置数字。提示Object.defineproperties，查询文档或者上课案例。
+        // (3)有方法getSize()获取盒子大小。返回数字，默认平方厘米。
+
+        //原始模式
+        // var box = {};
+        // box.width = 120;
+        // box.height = 120;
+        // box.bgcolor = "red";
+        // box.position = "left";
+
+        //工厂模式
+        // function boxEle(width,height,bgcolor,position){
+        //     var box = {};
+        //     box.width = width;
+        //     box.height = height;
+        //     box.bgcolor = bgcolor;
+        //     box.position = position;
+        //     return box;
+        // }
+
+        //构造函数
+        function BoxEle(boxesData) {
+            this._width = boxesData.width;
+            // console.log(this._width);
+            this._height = boxesData.height;
+            // console.log(this._height);
+            function change(value) {
+                let m;
+                if (!isNaN(value)) {
+                    m = value;
+                } else if (typeof value == "string") {
+                    if (value.endsWith("mm")) {
+                        m = parseFloat(value) * 0.1;
+                    } else if (value.endsWith("dm")) {
+                        m = parseFloat(value) * 10;
+                    } else if (value.endsWith("m")) {
+                        m = parseFloat(value) * 100;
+                    } else if (value.endsWith("cm")) {
+                        m = parseFloat(value);
+                    } else {
+                        throw "输入不合规范";
+                    }
+                } else {
+                    throw "输入不合规范";
+                }
+                return m;
+            }
+            Object.defineProperties(this, {
+                width: {
+                    get() {
+                        return this._width;
+                    },
+                    set(value) {
+                        // if (!isNaN(value)) {
+                        //     this._width = value;
+                        // } else if (typeof value == "string") {
+                        //     if (value.endsWith("mm")) {
+                        //         this._width = parseFloat(value) * 0.1;
+                        //     } else if (value.endsWith("dm")) {
+                        //         this._width = parseFloat(value) * 10;
+                        //     } else if (value.endsWith("m")) {
+                        //         this._width = parseFloat(value) * 100;
+                        //     } else if (value.endsWith("cm")) {
+                        //         this._width = parseFloat(value);
+                        //     } else {
+                        //         throw "输入不合规范";
+                        //     }
+                        // } else {
+                        //     throw "输入不合规范";
+                        // }
+                        this._width = change(value);
+                    }
+                },
+                height: {
+                    get() {
+                        return this._height;
+                    },
+                    set(value) {
+                        // if (!isNaN(value)) {
+                        //     this._height = value;
+                        // } else if (typeof value == "string") {
+                        //     if (value.endsWith("mm")) {
+                        //         this._height = parseFloat(value) * 0.1;
+                        //     } else if (value.endsWith("dm")) {
+                        //         this._height = parseFloat(value) * 10;
+                        //     } else if (value.endsWith("m")) {
+                        //         this._height = parseFloat(value) * 100;
+                        //     } else if (value.endsWith("cm")) {
+                        //         this._height = parseFloat(value);
+                        //     } else {
+                        //         throw "输入不合规范";
+                        //     }
+                        // } else {
+                        //     throw "输入不合规范";
+                        // }
+                        this._height = change(value);
+                    }
+                }
+            })
+            //如果width，height位置不对，则把参数放在下面
+            for (key in boxesData) {
+                this[key] = boxesData[key];
+            }
+        }
+
+        let boxData = {
+            width: 120,
+            height: 120,
+            bgcolor: "red",
+            position: "top",
+            getSize: function () {
+                return this.width * this.height;
+            }
+        };
+
+        let box = new BoxEle(boxData);
+
+        // 2.给所有字符串添加一个方法replaceAll方法的，实现一下功能。'abcaba'.replaceAll('a','x')，替换所有的字母a为z，返回结果为'xbcxbx'。
+        String.prototype.replaceAll = function (searchValue,repalceValue) {
+            // let strNew = this.replace(/a/g, b);
+            let str = this;
+            while(str.includes(searchValue)){
+                str = str.replace(searchValue,repalceValue);
+            }
+            return str;
+        }
+
+        // 3.给数组添加一个方法max可以返回数组的最大值，且不改变原数组。
+        let arr = [];
+        Array.prototype.max = function () {
+            let temArr = this.concat();
+            // for (i = 0; i < temArr.length - 1; i++) {
+            //     let m;
+            //     if (temArr[i] > temArr[i + 1]) {
+            //         m = temArr[i];
+            //         temArr[i] = temArr[i + 1];
+            //         temArr[i + 1] = m;
+            //     }
+            // }
+            temArr.sort(function(a,b){
+                return a-b;
+            })
+            return temArr[temArr.length - 1];
+        }
+    </script>
+</body>
+
+</html>

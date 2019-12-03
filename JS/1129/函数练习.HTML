@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数练习</title>
+    <style>
+        #skillList,
+        #showInfo {
+            width: 600px;
+            height: 400px;
+            outline: solid rosybrown;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #skillList div {
+            width: 100px;
+            height: 100px;
+            outline: solid rebeccapurple;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="skillList">
+        <div data-color="#d98e00">HTML</div>
+        <div data-color="#0096d9">CSS</div>
+        <div data-color="#00c72e">JavaScript</div>
+    </div>
+    <div id="showInfo">1</div>
+
+    <script>
+        let skillList = document.querySelectorAll("#skillList div");
+        let showInfo = document.querySelector("#showInfo");
+
+        function skillText(el) {
+                let skillText = el.innerText;
+                showInfo.innerText = (skillText);
+                let skillColor = el.getAttribute("data-color")
+                showInfo.style.backgroundColor = `${skillColor}`;
+                showInfo.style.color = "white"
+        }
+
+        skillList.forEach(function (item){
+            item.onclick = function () {
+                skillText(item);
+            }
+        })
+
+        function Obj(num,name,gender,tel){
+            this.num = num;
+            this.name = name;
+            this.gender = gender;
+            this.tel = tel;
+            this.changeTel = function(el){
+                return el;
+            }
+        }
+
+        Obj.prototype.all = function(){
+            return `num: ${this.num}
+                    name: ${this.name}
+                    gender: ${this.gender}
+                    tel: ${this.tel}`
+        }
+        let daomeixiong = new Obj("web001","倒霉熊","男","18212341234");
+    </script>
+</body>
+
+</html>

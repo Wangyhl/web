@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>键盘</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .green {
+            background-color: cadetblue;
+        }
+        .blue {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let box = document.querySelector(".box");
+        let _top = parseFloat(getComputedStyle(box).top);
+        let _left = parseFloat(getComputedStyle(box).left);
+        let boxClass = box.className;
+        let speed = 10;
+
+        window.onkeydown = function(e){
+            console.log(e);
+            if(e.keyCode == 38 || e.keyCode == 87){
+                _top -= speed;
+                box.style.top = _top + "px";
+            }
+            if(e.keyCode == 40 || e.keyCode == 83){
+                _top += speed;
+                box.style.top = _top + "px";
+            }
+            if(e.keyCode == 37 || e.keyCode == 65){
+                _left -= speed;
+                box.style.left = _left + "px";
+            }
+            if(e.keyCode == 39 || e.keyCode == 68){
+                _left += speed;
+                box.style.left = _left + "px";
+            }
+            if(e.keyCode == 49 && e.ctrlKey){
+                box.className = boxClass + " " + "green";
+            }
+            if(e.keyCode == 50 && e.ctrlKey){
+                box.className = boxClass  + " " + "blue";
+            }
+            if(e.keyCode == 27){
+                box.className = boxClass;
+            }
+        }
+    </script>
+</body>
+</html>

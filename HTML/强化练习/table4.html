@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table4</title>
+    <style>
+        table {
+            width: 500px;
+        }
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid blue;
+        }
+        .t1 {
+            text-align: center;
+        }
+        .t2 td {
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>项目</th>
+            <th colspan="5">上课</th>
+            <th colspan="2">休息</th>
+        </tr>
+        <tr>
+            <th>星期</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+            <th>星期日</th>
+        </tr>
+        <tr>
+            <td rowspan="4" class="t1">上午</td>
+            <td>语文</td>
+            <td>数学</td>
+            <td>英语</td>
+            <td>英语</td>
+            <td>物理</td>
+            <td>计算机</td>
+            <td rowspan="4" class="t1">休息</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>数学</td>
+            <td>地理</td>
+            <td>历史</td>
+            <td>化学</td>
+            <td>计算机</td>
+        </tr>
+        <tr>
+            <td>化学</td>
+            <td>语文</td>
+            <td>体育</td>
+            <td>计算机</td>
+            <td>英语</td>
+            <td>计算机</td>
+        </tr>
+        <tr>
+            <td>政治</td>
+            <td>英语</td>
+            <td>体育</td>
+            <td>历史</td>
+            <td>地理</td>
+            <td>计算机</td>
+        </tr>
+        <tr class="t2">
+            <td colspan="8"></td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="t1">下午</td>
+            <td>语文</td>
+            <td>数学</td>
+            <td>英语</td>
+            <td>英语</td>
+            <td>物理</td>
+            <td>计算机</td>
+            <td rowspan="2" class="t1">休息</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>数学</td>
+            <td>地理</td>
+            <td>历史</td>
+            <td>化学</td>
+            <td>计算机</td>
+        </tr>
+    </table>
+</body>
+
+</html>

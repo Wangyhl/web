@@ -1,0 +1,66 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+     
+     <title>实现99乘法表</title>
+     <style>
+        div {
+            background-color: #3C3;
+            width: 600px;
+            height: 300px;
+        }
+
+        table {
+            border: #F00 1px;
+        }
+    </style>
+     </head>
+ 
+<script language="javascript" type="text/javascript">
+    //绘制表格
+    function drawTable() {
+        var table = document.createElement("table");
+        //给表格加边框
+        table.setAttribute("border", "1");
+        //外层循环控制行数
+        for (var i = 1; i <= 9; i++) {
+            //循环创建tr
+            var tr = document.createElement("tr");
+            //里层循环控制列数
+            for (var j = 1; j <= i; j++) {
+                var text = document.createTextNode(j + "*" + i + "=" + i * j);
+                var td = document.createElement("td");
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        document.getElementById("d1").appendChild(table);
+    }
+
+    function delTable() {
+
+        //获得table
+        var tr = document.getElementsByTagName("tr");
+        var table = tr[0].parentNode;
+        var element = table.removeChild(tr[tr.length - 1]);
+        //根据table删除tr
+        alert(element);
+
+    }
+</script>
+ 
+
+<body>
+
+
+    <div id="d1">
+    </div>
+    <input type="button" value="绘制99乘法表" οnclick="drawTable()">
+    <input type="button" value="删除一行" οnclick="delTable()">
+    ————————————————
+    版权声明：本文为CSDN博主「bing7599069」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+    原文链接：https://blog.csdn.net/bing7599069/article/details/7303396

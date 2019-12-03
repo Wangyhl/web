@@ -1,0 +1,44 @@
+/* 避免乱码 */
+@charset "utf-8";
+
+.ct {
+    width: 200px;
+    height: 400px;
+    background: pink;
+    margin: 50px auto;
+}
+
+.ct:nth-child(odd) {
+    background: powderblue;
+}
+
+.go-back {
+    width: 28px;
+    height: 64px;
+    background: url(../img/imgs.png);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.go-back:hover {
+    background-position: -28px 0;
+}
+
+.box {
+    line-height: 31px;
+    text-align: center;
+    background: repeating-linear-gradient(to bottom,transparent 0,transparent 30px,blue 31px);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.level {
+    width: 200px;
+    height: 25px;
+}

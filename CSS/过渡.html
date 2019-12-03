@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡</title>
+    <style>
+        section {
+            background-color: red;
+            transition: 1s;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #131313;
+            float: left;
+            margin-right: 20px;
+        }
+        /* 第一个section改变背景颜色 */
+        section:nth-child(1) {
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+        }
+
+        section:nth-child(1):hover {
+            background-color: rgb(148, 188, 143);
+        }
+        /* 第二个section改变边框颜色 */
+        section:nth-child(2) {
+            transition-property: border-color;
+            transition-duration: 0.9s;
+            transition-timing-function: linear;
+            transition-delay: 0.4s;
+        }
+
+        section:nth-child(2):hover {
+            border-color: seagreen;
+        }
+        /* 第三个section改变边框形状和颜色 */
+        section:nth-child(3) {
+            transition-property: border-radius,border-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 0.8s;
+        }
+
+        section:nth-child(3):hover {
+            border-radius: 50%;
+            border-color: rgb(221, 183, 155);
+        }
+        /* 第四个section改变所有 */
+        section:nth-child(4) {
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+        }
+        section:nth-child(4):hover {
+            background-color: teal;
+            border-color: tomato;
+            border-radius: 50%;
+        }
+
+        section:nth-child(5) {
+            transition-timing-function: ease-out;
+            transition-delay: 1.4s;
+        }
+
+        section:nth-child(5):hover {
+            background-color: teal;
+            border-color: tomato;
+            border-radius: 50%;
+        }
+
+        section:nth-child(6) {
+            transition-timing-function: cubic-bezier(0.9,1,0.5,2);
+            transition-delay: 2s;
+        }
+
+        section:nth-child(6):hover {
+            background-color: teal;
+            border-color: tomato;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+</body>
+</html>

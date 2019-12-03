@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>身份证</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            background-color: blanchedalmond;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid rgb(206, 206, 206);
+        }
+
+        .top {
+            width: 300px;
+            height: 50px;
+            /* border: 1px solid rgb(55, 50, 61); */
+            margin: 20px auto;
+            line-height: 50px;
+        }
+        label{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 7. 输入身份证号，点击按钮，显示出生年月，输出格式为："出生年月：xxxx年xx月xx日" -->
+    <div class="box">
+        <div class="top">
+            <label for="in-num">身份证号：</label>
+            <input type="text" id="in-num">
+        </div>
+        <div class="top">
+            <label for="out-num">出生年月日：</label>
+            <input type="text" id="out-num" disabled>
+        </div>
+        <button id="chick">点我</button>
+    </div>
+    <script src="js/身份证.js"></script>
+</body>
+</html>

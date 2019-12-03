@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        //创建对象
+        //必须用new + 大写字母开头命名
+        //构造函数 方法一
+        let tea = new Object();
+        tea.name = "jack";
+        tea.age = 22;
+        tea.hello = function(){
+            console.log("hello");
+        }
+
+        //方法二
+        let person = {};
+        person.name = "lacy";
+        person.age = 10;
+        person.word = function(){
+            console.log("word");
+        }
+
+        //原始模式
+        let person1 = {
+            name: "lilei",
+            age: 30,
+            sex: function(){
+                console.log("man");
+                return "man";
+            }
+        }
+
+        //工厂模式
+        function createPerson(name,age){
+            let obj = {};
+            obj.name = name;
+            obj.age = age;
+            obj.hello = function(){
+                console.log("hello");
+            }
+            return obj;
+        }
+        let obj1 = createPerson("hanmeimei",20);
+        let obj2 = createPerson("jack",25);
+
+        //构造函数
+        //使用this
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            this.word = function(){
+                console.log("word");
+            }
+        }
+        let lily = new Person("lily",15);
+        let zyl = new Person("zyl",28);
+
+        Person.prototype.good = "i am good";
+
+        //混合模式（构造+原型）
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.hi = function(){
+            console.log(`hello i am ${this.name}`)
+        };
+        let jack = new Person("jack",20);
+        let zjl = new Person("zjl",25);
+
+        // ------------对象基本操作------------
+        var hero = {
+            name:"李白",
+            skill:"青莲剑歌",
+            zb:"三相之力"
+        }
+
+        //增
+        hero.skill = ["旋转跳跃","大保健"];
+        //删
+        delete hero.zb;//之间删除zb属性
+        //hero.zb = null;//把zb键对应的值设为空
+        //改
+        hero.name = "德玛西亚";
+        //查
+        hero.name;
+        hero[name];
+        var key = "name";
+        hero.key;//undifined
+        hero[key];//"德玛西亚"
+    </script>
+</body>
+</html>

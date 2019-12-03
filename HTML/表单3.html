@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单3</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            width: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+        label {
+            /*把label标签由行内变为行内块，目的是为了给他设置宽度属性*/
+            display: inline-block;
+            /*给label标签设置统一宽度，目的是为了让里面的内容对齐*/
+            width: 100px;
+            /*设置lable里内容居右对齐*/
+            text-align: right;
+            /*设置label垂直居上*/
+            vertical-align: top;
+        }
+        form {
+            margin: auto;
+            width: 400px;
+            text-align: center;
+        }
+        form div {
+            margin: 10px;
+            text-align: left;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://www.baidu.com" method="POST" target="_blank">
+        <div>
+            <h1>表单元素示例</h1>
+        </div>
+
+        <div>
+            <label>用户名：</label>
+            <input name="name" type="text" placeholder="请输入6~12位用户名" required />
+        </div>
+
+        <div>
+            <label>昵称：</label>
+            <input name="name2" type="text" placeholder="请输入大家对你的称呼" required />
+        </div>
+
+        <div>
+            <label>密码：</label>
+            <input name="password" type="password" placeholder="请输入8~16位英文，数字或符号的密码" required />
+        </div>
+
+        <div>
+            <label>确认密码：</label>
+            <input name="password2" type="password" placeholder="请再次输入密码" required />
+        </div>
+
+        <div>
+            <label>手机：</label>
+            <input name="tel" type="tel" placeholder="请输入你的手机号码" required />
+        </div>
+
+        <div>
+            <label>性别：</label>
+            <input name="sex1" type="radio" />保密
+            <input name="sex2" type="radio" />男
+            <input name="sex3" type="radio" />女
+        </div>
+
+        <div>
+            <label>爱好：</label>
+            <input name="hobby1" type="checkbox" />看书
+            <input name="hobby2" type="checkbox" />运动
+            <input name="hobby3" type="checkbox" />电脑
+            <input name="hobby4" type="checkbox" />旅游
+        </div>
+
+        <div>
+            <label>所属行业：</label>
+            <select name="hangye">
+                <option value="1" disabled selected>请选择</option>
+                <option value="2">IT</option>
+                <option value="3">老师</option>
+                <option value="4">医生</option>
+            </select>
+        </div>
+
+        <div>
+            <label>个人主页：</label>
+            <input name="url" type="url" placeholder="如：http://www.aulence.com" required />
+        </div>
+
+        <div>
+            <label>个人简介：</label>
+            <textarea cols="22px" rows="5px" placeholder="让大家更快的认识你"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit">注册</button>
+            &emsp;&emsp;
+            <button type="reset">重置</button>
+        </div>
+    </form>
+</body>
+
+</html>

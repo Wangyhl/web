@@ -1,0 +1,173 @@
+/* -----公共样式------- */
+body {
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.banxin {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* --------头部部分--------- */
+header {
+    background-color: #353535;
+    height: 70px;
+}
+
+.logo img{
+    height: 70px;
+    float: left;
+    margin-right: 75px;
+}
+
+.nav {
+    float: left;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #C6C2B3;
+    padding: 30px;
+    line-height: 65px;
+}
+
+.seatch {
+    font-size: 0;
+    float: right;
+    line-height: 75px;
+}
+
+.seatch input {
+    border: none;
+    height: 30px;
+    width: 170px;
+    background-color: black;
+    border: 1px solid #969893;
+    color: #969893;
+}
+
+button {
+    border: none;
+    width: 34px;
+    height: 34px;
+    /* margin-left: -5px; == 给seatch设置font-size：0；*/
+    background-color: #07A0E6;
+}
+
+button i {
+    color: white;
+    vertical-align: middle;
+}
+
+/* ----------------主体部分----------------- */
+
+main {
+    background-color: #DEDEDE;
+}
+
+.box-top {
+    width: 95%;
+    /* background-color: blueviolet; */
+    margin: 0 auto;
+    padding: 50px 0 0;
+    padding-left: 55px;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 337px;
+    height: 295px;
+    background-color: white;
+    float: left;
+    margin-right: 18px;
+    margin-top: 18px;
+    padding: 18px 12px 0;
+    box-sizing: border-box;
+}
+
+.box:nth-child(3n) {
+    margin-right: 0;
+}
+
+section img {
+    width: 314px;
+    height: 190px;
+}
+
+.time {
+    line-height: 2;
+    font-size: 12px;
+    color: #DEE0DF;
+}
+
+.title {
+    line-height: 2;
+    font-size: 14px;
+    color: #747877;
+}
+
+.box-bottom {
+    font-size: 11px;
+    /* background-color: cadetblue; */
+    padding: 20px 0;
+    padding-right: 150px;
+}
+
+.box-bottom p,.box-bottom ul {
+    float: right;
+}
+
+.box-bottom p {
+    line-height: 23px;
+    color: #6C6D71;
+}
+
+.box-bottom ul li{
+    border: 1px solid #CBCBCB;
+    padding: 5px;
+    margin-right: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.box-bottom ul li:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ---------脚部内容----------- */
+footer {
+    background-color: #1E1E1E;
+    height: 108px;
+    font-size: 12px;
+}
+
+.foot .foot-list {
+    float: left;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+.foot .foot-list a {
+    text-decoration: none;
+    color: #2E7AB4;
+}
+
+.copyright {
+    margin-top: 25px;
+    color: #595758;
+}
+
+.copyright span {
+    color: #98979C;
+}

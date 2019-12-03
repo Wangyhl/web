@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1114作业</title>
+    <style>
+        table,tr,th,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        table{
+            width: 600px;
+            height: 200px;
+            text-align: center;
+        }
+        thead tr{
+            background-color: darkkhaki;
+        }
+        tbody>tr:nth-child(2n+1){
+            background-color: coral;
+        }
+        tbody>tr:nth-child(2n){
+            background-color: cornflowerblue;
+        }
+        tbody>tr:nth-child(2n+1):hover{
+            background-color: rgb(250, 166, 135);
+        }
+        tbody>tr:nth-child(2n):hover{
+            background-color: rgb(144, 178, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一题
+把数据渲染到一个表格里面，表格要求
+1.奇偶行颜色不一样
+2.当鼠标指针指到一行显示，次行高亮显示 -->
+
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>phone</th>
+                    <th>email</th>
+                    <th>age</th>
+                    <th>companyId</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="js/1114.js"></script>
+</html>

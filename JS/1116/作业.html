@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+</head>
+<body>
+    <script>
+        // 1. 将字符串 “hello” 逆序输出为 “olleh”
+        function str(){
+            var str = "hello";
+            // var strArr = str.split("")
+            var strOut = ""
+            for(i = str.length-1;i >= 0;i--){
+                strOut += str[i];
+            }
+            console.log(strOut);
+        }
+        str();
+
+        // 2. 删除字符串 “01i13P47h2o39n32e09” 中的所有数字，输出结果
+        function str2(){
+            var str2 = "01i13P47h2o39n32e09";
+            var strOut2 = str2.replace(/\d/g,"");
+            console.log(strOut2);
+        }
+        str2();
+            // 方法二遍历
+        function str21(){
+            var str21 = "01i13P47h2o39n32e09";
+            for(i = 0;i < str21.length;i++){
+                if(!isNaN(str21[i])){
+                    str21 = str21.replace(str21[i],"");
+                    i -= 1;
+                }
+            }
+            console.log(str21)
+        }
+        str21();
+
+        // 3. 定义一个字符串 ”CHINESE“，将其输出为 “Chinese“
+        function str3(){
+            var str3 = "CHINESE";
+            var strOut3 = str3[0].toUpperCase() + str3.substring(1).toLowerCase();
+            console.log(strOut3);
+        }
+        str3();
+
+        // 4. 统计 ”warriors” 单词中，“r“字母出现的次数
+        function str4(){
+            var str4 = "warriors";
+            var strArr4 = str4.split("");
+            var strOut4 = 0;
+            for(j of strArr4){
+                if(j == "r"){
+                    strOut4 ++;
+                }
+            }
+            console.log(strOut4);
+        }
+        str4();
+
+        // 5. 将字符串 ”-_-” 中的 “_“ 替换成 ”$”
+        function str5(){
+            var str5 = "-_-";
+            for(v = 0; v < str5.length; v++){
+                if(str5[v] == "_"){
+                    var strOut5 = str5.replace("_","$");
+                }
+            }
+            console.log(strOut5);
+        }
+        str5();
+
+        //方法二while
+        function str51(){
+            var str51 = "-_--__-+-";
+            while(str51.includes("_")){
+                str51 = str51.replace("_","%");
+            }
+            console.log(str51);
+        }
+        str51();
+
+        //方法三 遍历数组
+        function str52(){
+            var str52 = "-_--__-+-";
+            var array52 = str52.split('')
+            for(var i in array52){
+                if(array52[i] == '-'){
+                    array52[i] = '$'
+                }
+            }
+            var res52 = array52.join('')
+            console.log(res52)
+        }
+        str52();
+
+        // 6. 将字符串”border-bottom-color” 转换成驼峰命名”borderBottomColor”
+        function str6(){
+            var str6 = "border-bottom-color";
+            // var strArr6 = str6.replace(/-/g,"");
+            var strArr6 = str6.split("-");
+            for(var n = 1;n < strArr6.length;n++){
+                // console.log(strArr6[n])
+                strArr6[n] = strArr6[n].charAt(0).toUpperCase() + strArr6[n].slice(1);
+            }
+            console.log(strArr6.join(""))
+        }
+        str6();
+
+        //方法二
+        function str61(){
+            var str61 = "border-bottom-color";
+            var arr61 = str61.split("");
+            for(x = 0;x < arr61.length;x++){
+                if(arr61[x] == "-"){
+                    arr61[x] = "";
+                    arr61[x+1] = arr61[x+1].toUpperCase();
+                    console.log(arr61[x+1]);
+                }
+            }
+            var strOut61 = arr61.join("");
+            console.log(strOut61)
+        }
+        str61();
+
+    </script>
+</body>
+</html>

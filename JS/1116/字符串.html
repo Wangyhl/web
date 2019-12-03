@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串</title>
+</head>
+<body>
+    <script>
+        //字符串转数组
+        var str = "HTML,CSS,JavaScript,jQuery";
+        //括号里什么都没有时直接转换为一个整的数组
+        var arr2 = str.split();
+        //为空时会把所有字符都分隔开包括逗号等
+        var arr3 = str.split("");
+        //用逗号分隔时，每遇到一个逗号则分隔为一个数组
+        var arr = str.split(",");
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr);
+
+        //数组转字符串
+        var arr1 = ['189','1234','1234'];
+        //什么都没有时转换为用逗号隔开的字符串
+        var str3 = arr1.join();
+        //为空时转换为拼接的字符串，中间没有符号
+        var str2 = arr1.join("");
+        //引号内加入任意字符时，转换的字符串中间也会有该字符
+        var str1 = arr1.join("-");
+        console.log(str3);
+        console.log(str2);
+        console.log(str1);
+
+        var str4 = "当然这两个方法也可以不给出参数用它们内置的默认值进行处理";
+        var arr4 = str4.split("");
+        console.log(arr4);
+        //两个字一组打印
+        for(i = 0;i <= arr4.length;i+=2){
+            // if(arr4[i+1] == undefined){
+            //     var a = "";
+            // }else{
+            //     var a = arr4[i+1];
+            // }
+            if(i == arr4.length-1){
+                console.log(arr4[i]);
+            }else{
+                console.log(arr4[i]+arr4[i+1]);
+            }
+        }
+
+        var str5 = "\n当\n然这\n两个\n方\n\n法也可\n以不给\n出参\n数用\n它们内置的\n默认值\n进行\n处\n理"
+        //转义符也可用于数组的转换，相当于逗号等符号，两个转义符之间如果没有字符，则会转换成一个空的数组
+        var arr5 = str5.split("\n");
+        console.log(arr5);
+
+        var str6 = "\\n表示换行";
+        console.log(str6);
+
+    </script>
+</body>
+</html>

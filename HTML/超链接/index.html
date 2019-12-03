@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#bottom">BOTTOM</a>
+        <nav>
+            <a href="html/home.html" target="ifr_1">home页面</a>&nbsp;
+            <a href="img/linglong1.jpg" target="ifr_2">龄龙（窗口2显示）</a>&nbsp;
+            <a href="doc/readme.txt" target="_blank">原网页</a>&nbsp;
+            <a href="../img/beijing.JPG" target="_black"><img src="img/linglong1.jpg" alt="加载中..." title="跳转到背景"></a>
+        </nav>
+        <iframe name="ifr_1" width="100%" height="560" src="html/home.html"></iframe>
+    </div>
+    <div>
+        <nav>
+            <a href="html/home.html" target="ifr_2">home页面</a>&nbsp;
+            <a href="img/linglong1.jpg" target="ifr_1">龄龙（窗口1显示）</a>&nbsp;
+            <a href="doc/readme.txt" target="_blank">原网页</a>
+            <a href="img/linglong1.jpg" download="linglong"><img src="img/linglong1.jpg" alt="加载中..." title="点击下载"></a>
+        </nav>
+        <iframe name="ifr_2" width="100%" height="560" src="html/home.html"></iframe>
+    </div>
+    <div id="bottom">
+        <a href="#top">TOP</a>
+    </div>
+</body>
+</html>

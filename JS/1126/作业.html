@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+</head>
+
+<body>
+    <script>
+        let school = {
+            name: "山东南翔",
+            students: [
+                {
+                    name: '国强子',
+                    age: 25,
+                    fav: ['唱歌', '游戏']
+                },
+                {
+                    name: '铁锤',
+                    age: 28,
+                    fav: ['rap', '游戏']
+                }
+            ],
+            teachers: [
+                {
+                    name: '唐老师',
+                    age: 45,
+                    fav: ['挖掘机', '开车']
+                },
+                {
+                    name: 'tony老师',
+                    age: 28,
+                    fav: ['洗', '剪', '吹']
+                }
+            ]
+        }
+        //1.至少使用两种方法完成上面school对象的深拷贝。可尝试使用函数递归的方式
+        //JSON方法
+        function jsonDeepCopy(obj) {
+            let objStr = JSON.stringify(obj);
+            return JSON.parse(objStr);
+        }
+        let schoolCopy = jsonDeepCopy(school);
+
+        //Object.assign方法
+        function assignDeepCopy(obj2) {
+            return Object.assign({}, obj2);
+        }
+        let schoolCopy2 = assignDeepCopy(school);
+
+        //递归
+        function deepCopy(parent, child) {
+            child = child || {};
+            for (var key in parent) {
+                if (typeof parent[key] === 'object') {
+                    child[key] = (parent[key].constructor === Array) ? [] : {};
+                    // 递归调用
+                    deepCopy(parent[key], child[key]);
+                } else {
+                    child[key] = parent[key];
+                }
+            }
+            return child;
+        }
+        let schoolCopy3 = deepCopy(school);
+
+// ------------------------第二题--------------------------------
+        let attackBase = {
+            hp: 100,
+            mp: 100,
+            gjl: 10,
+            attack: function () { console.log('攻击对方') }
+        }
+        let hero = {
+            hp: 100,
+            mp: 100,
+            gjl: 10,
+            attack: function () { console.log('攻击对方') },
+            type: 'hero'
+        }
+
+        let soldier = {
+            hp: 100,
+            mp: 100,
+            gjl: 10,
+            attack: function () { console.log('攻击对方') },
+            type: 'soldier'
+        }
+    //2.给定三个对象模板，创建模板对应的构造函数，通过继承实现。
+    function Attack(hp,mp,gjl){
+        this.hp = hp;
+        this.mp = mp;
+        this.gjl = gjl;
+        this.attack = function(){
+            console.log('攻击对方');
+        }
+    }
+
+    function Hero(hp,mp,gjl,type){
+        Attack.apply(this,arguments);
+        this.type = type;
+    }
+
+    let hero1 = new Hero(100,100,10,'hero');
+    let soldier1 = new Hero(100,100,10,'soldier');
+
+    </script>
+</body>
+
+</html>

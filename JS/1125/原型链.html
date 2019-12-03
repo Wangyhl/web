@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型链</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            this.sayName = function(){
+                console.log(`hello i am ${this.name}`);
+            }
+        }
+        Person.prototype.name = "Nicholas";
+        Person.prototype.age = 29;
+        Person.prototype.job = "software engineer";
+
+        var p1 = new Person();
+        var p2 = new Person();
+    </script>
+</body>
+</html>

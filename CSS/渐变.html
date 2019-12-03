@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>渐变</title>
+    <style>
+        #d1 {
+            width: 10rem;
+            height: 10rem;
+            /* 名称设置方向 */
+            /* background: linear-gradient(to right top,green,blue); */
+
+            /* 角度设置方向 */
+            /* background: linear-gradient(125deg,green,blue); */
+
+            /* 渐变节点 */
+            /* background: linear-gradient(green 30px,blue 60px,red 90px,pink 125px); */
+
+            /* 透明的设置 */
+            /* background: linear-gradient(green 30px,blue 60px,red 90px,rgba(254, 193, 204,.5) 125px); */
+
+            /* 练习 */
+            /* background: linear-gradient(yellow 50px,red 130px,yellow 190px); */
+
+            /* 重复渐变 */
+            background: repeating-linear-gradient(green 0px,blue 30px,red 60px,rgba(254, 193, 204,.5) 90px);
+
+        }
+
+        #d2 {
+            width: 20rem;
+            height: 20rem;
+            /* background-color: black; */
+            margin: 10px;
+            background: repeating-linear-gradient(#DDDDDD,#DDDDDD 20px,#EEEEEE 20px,#EEEEEE 40px);
+        }
+
+        #d3 {
+            width: 20rem;
+            height: 20rem;
+            margin: 10px;
+            background: repeating-linear-gradient(#eeeeee,#eeeeee 20px,#dddddd 20px,#dddddd 25px);
+        }
+
+        #d4{
+            width: 10rem;
+            height: 10rem;
+            background: repeating-radial-gradient(red 0%,yellow 10%,green 20%);
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+</body>
+</html>

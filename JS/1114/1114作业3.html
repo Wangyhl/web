@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业3</title>
+    <style>
+        .clearfix{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            background-color: rgb(214, 161, 161);
+            text-align: center;
+            border: 1px solid black;
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .one{
+            margin: 0 auto;
+            height: 50px;
+            text-align: center;
+            /* background-color: rgb(196, 192, 192); */
+            padding: 0 210px;
+            box-sizing: border-box;
+        }
+        .one>li{
+            float: left;
+        }
+        .one>li a{
+            text-decoration: none;
+            color: black;
+        }
+        .one li:hover{
+            background-color: burlywood;
+        }
+
+        .two{
+            display: none;
+        }
+        .one :hover .two{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav ">
+        <ul class="one clearfix">
+            <!-- <ul class="two">
+
+            </ul> -->
+        </ul>
+    </div>
+</body>
+<script src="js/1114作业3.js"></script>
+</html>

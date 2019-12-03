@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+</head>
+<body>
+
+    <script>
+        // 第一题:封装一个输入半径求圆的面积的函数,提示:prompt(),pi = Math.PI，结果保留2位有小数。
+            // function mj(){
+            //     var r = Number(prompt("输入半径"));
+            //     var pi = Math.PI;
+            //     return (pi * r**2).toFixed(2);
+            // }
+            // console.log(mj());
+
+        // 第二题：封装一个函数，输入一个参数age，如果age>18则打印"你可以浏览此网站了"，否则打印"还是去看葫芦娃吧！"
+            // function age(){
+            //     var age = prompt("输入年龄");
+            //     if(age > 18){
+            //         console.log("你可以浏览此网站了")
+            //     }else{
+            //         console.log("还是去看葫芦娃吧！")
+            //     }
+            // }
+            // age();
+
+        // 第三题：封装一个函数，函数接收2个参数，参数为正整数，返回两个数之间的随机整数。如f(10,20)，返回10-20之间的整数。
+            // function round(a,b){
+            //     return Math.round(Math.random()*(a-b)+b)
+            // }
+            // round();
+
+        // 第四题：封装一个函数，函数可以接收0-2个参数，如果接收一个参数，则返回0到这个参数之间一个随机整数，如果接收两个参数则返回则两个参数之间的一个随机整数。
+            function randomBetween(x,y){
+                return Math.round(Math.random()*(x-y)+y);
+            }
+            randomBetween();
+        function round2(a,b){
+            // console.log(arguments);
+            if(arguments.length == 1){
+                // return Math.round(Math.random()*a);
+                return randomBetween(0,arguments[0]);
+            }else if(arguments.length >= 2){
+                // return Math.round(Math.random()*(a-b)+b);
+                return randomBetween(arguments[0],arguments[1]);
+            }else{
+                return "请输入1-2个参数";
+            }
+        }
+        round2();
+
+        // 第五题：封装一个函数，函数可以接收0-3个参数，返回一个固定长度的随机数组。如f(len,start,end),len代表数组的长度，形参len默认值为5可省略，start代表数组随机的最小值默认值为0，end代表随机数最大值默认值为100。
+        // 例如 f(),返回一个长度为5的数组，数组元素随机分布在0-100之间；
+        // f(4),返回一个长度为4的数组，数组元素随机分布在0-100之间;
+        // f(8,10),返回一个长度为8的数组，数组元素随机分布在10-100之间;
+        // f(20,10,40),返回一个长度为20的数组，数组元素随机分布在10-40之间;
+        function f(len,start,end){
+            len = len == undefined ? 5 : len;
+            start = start == undefined ? 0 : start;
+            end = end == undefined ? 100 : end;
+            arr = [];
+            for(i = 0;i < len;i++){
+                var array = Math.round(Math.random()*(end-start)+start);
+                arr.push(array);
+            }
+            console.log(arr);
+        }
+        f();
+
+        // 第六题：封装一个函数，输入一个数组，返回一个包含数组中的最大值和最小值得函数,如输入[2,4,6,9,3] 返回 [9,2]。
+        function arr2(arr2){
+            // for(j = 0;j < a.length;j++){
+            //     if(a[j] < a[j+1]){
+            //         var x = a[j];
+            //         a[j] = a[j+1];
+            //         a[j+1] = x;
+            //     }
+            // }
+            // var min = a[a.length-1];
+            // console.log(min);
+            // for(j = 0;j < a.length;j++){
+            //     if(a[j] > a[j+1]){
+            //         var x = a[j];
+            //         a[j] = a[j+1];
+            //         a[j+1] = x;
+            //     }
+            // }
+            // var max = a[a.length-1];
+            // console.log(max);
+            // array2 = [max,min];
+            // console.log(array2);
+            arr2.sort(function(a,b){
+                return a-b;
+            })
+            var resArr = [arr2[arr2.length-1],arr2[0]];
+            console.log(resArr)
+        }
+    </script>
+</body>
+</html>

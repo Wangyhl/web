@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>biaodan3</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+        }
+        button {
+            width: 300px
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin: auto;
+            width: 350px;
+            text-align: center;
+            background: rgb(78, 157, 247);
+        }
+        form div {
+            margin: 15px;
+            text-align: center;
+            position: relative;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <h1>注册表单</h1>
+        </div>
+        <div>
+            <label>用户名：</label>
+            <input name="user" type="text" placeholder="请输入用户名" required />
+        </div>
+        <div>
+            <label>密码：</label>
+            <input name="pass" type="password" placeholder="请输入密码" required />
+        </div>
+        <div>
+            <label>电子邮箱：</label>
+            <input name="email" type="email" placeholder="请输入电子邮件" required />
+        </div>
+        <div>
+            <label>电话：</label>
+            <input name="tel" type="tel" placeholder="请输入手机号码" required />
+        </div>
+        <div>
+            <button type="submit">注册</button>
+        </div>
+        <div>
+            <p>已有账号？点击<span><a href="https://www.baidu.com">登录</a></span></p>
+        </div>
+    </form>
+</body>
+</html>

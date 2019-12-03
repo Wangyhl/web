@@ -1,0 +1,35 @@
+.box {
+    width: 400px;
+    height: 205px;
+    border: 1px solid rgb(206, 205, 205);
+    margin: 0 auto;
+}
+#out-num {
+    width: 400px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    background-color: rgb(247, 247, 247);
+    text-align: right;
+}
+.list {
+    margin: 5px auto;
+    width: 400px;
+    height: 25px;
+    text-align: center;
+}
+.in-num {
+    padding: 0;
+    width: 95px;
+    height: 25px;
+    background-color: rgb(243, 242, 242);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.in-num:active{
+    color: rgb(253, 143, 104);
+    box-shadow: 0 0 10px 5px rgb(223, 220, 220) inset;
+}

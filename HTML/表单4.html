@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单4</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 75px;
+            text-align: right;
+        }
+        button{
+            width: 100px;
+        }
+        form div{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label>用户名：</label>
+            <input name="user" type="text" placeholder="请输入用户名" required />
+        </div>
+        <div>
+            <label>密码：</label>
+            <input name="pass" type="password" placeholder="请输入密码" required />
+        </div>
+        <div>
+            <button type="submit">登录</button>
+            &emsp;
+            <button type="reset">重置</button>
+        </div>
+    </form>
+    <form>
+        <table cellspacing="5px">
+            <tr>
+                <td style="text-align: right; width: 80px;">用户名：</td>
+                <td><input name="user" type="text" placeholder="请输入用户名" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right; width: 80px;">密码：</td>
+                <td><input name="pass" type="password" placeholder="请输入密码" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">登录</button>
+                    &emsp;
+                    <button type="reset">重置</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

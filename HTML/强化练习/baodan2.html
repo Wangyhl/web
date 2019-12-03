@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>biaodan2</title>
+    <style>
+        table,tr,td{
+            /* border-collapse: collapse; */
+            background: rgb(128, 192, 85);
+            border: 1px solid white;
+        }
+        .t1 {
+            text-align: right;
+        }
+        textarea {
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td class="t1">
+                    <label>公司名称：</label>
+                </td>
+                <td>
+                    <input name="name" type="text" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>公司网站：</label>
+                </td>
+                <td>
+                    <input name="url" type="url" value="http://" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>登录密码：</label>
+                </td>
+                <td>
+                    <input name="pass" type="password" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>性别：</label>
+                </td>
+                <td>
+                    <input name="sex" type="radio" required />男
+                    <input name="sex" type="radio" required />女
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>申请产品：</label>
+                </td>
+                <td>
+                    <input name="sex" type="checkbox" required />实木
+                    <input name="sex" type="checkbox" required />沙发
+                    <input name="sex" type="checkbox" required />办公
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>联系人证件：</label>
+                </td>
+                <td>
+                    <input name="file" type="file" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">
+                    <label>密码查询问题：</label>
+                </td>
+                <td>
+                    <select>
+                        <option value="1">请选择查询问题</option>
+                        <option value="1">问题1</option>
+                        <option value="1">问题2</option>
+                        <option value="1">问题3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/img/beijing.JPG" width="150px">
+                </td>
+                <td>
+                    <textarea></textarea>
+                </td>
+            </tr>
+            <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">提交</button>
+                        <button type="reset">取消</button>
+                    </td>
+                </tr>
+        </table>
+    </form>
+</body>
+
+</html>

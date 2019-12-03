@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <!-- <form action="https://www.baidu.com">
+            <input list="dl">
+            <datalist id="dl">
+                <option value="360"></option>
+                <option value="baidu"></option>
+                <option value="sougou"></option>
+                <option value="bilibili"></option>
+                <option value="baihe"></option>
+            </datalist>
+
+            <select>
+                    <option value="1">360</option>
+                    <option value="2">baidu</option>
+                    <option value="3">sougou</option>
+            </select>
+        </form> -->
+        <!-- <input name="test2" form="f1"> -->
+        <!-- <form action="https://www.baidu.com" method="GET" target="_parent" id="f1" autocomplete="off" novalidate="novalidate"> -->
+            <!-- <p>h5表单相关</p>
+            <input name="num" type="color" required >
+            <br/>
+            <input name="time" type="time">
+            <br/>
+            <input name="time" type="date">
+            <br/>
+            <input name="time" type="month">
+            <br/>
+            <input name="time" type="week">
+            <br/>
+            <input name="time" type="datetime">
+            <br/>
+            <input name="time" type="datetime-local"> -->
+            <!-- <input pattern="[A-z][0-9]{6,12}" title="必须以一个英文字母开头，后面跟五位数" placeholder="必须以一个英文字母开头，后面跟五位数" name="val">
+            <br/>
+            <button type="submit">提交</button> -->
+            <!-- <input name="test1" placeholder="请输入用户名" type="email">
+            <br/>
+            <input name="test2" placeholder="请输入密码" type="password">
+            <br/> -->
+            <!-- <input type="image" src="img/beijing.JPG" width="50px" height="50px"> -->
+            <!-- <button type="submit" formmethod="POST">去百度登录</button>
+            <button type="submit" formaction="https://so.com" formtarget="_blank">去360登录</button>
+            <button type="submit" formaction="https://www.sogou.com">去搜狗登录</button> -->
+        <!-- </form> -->
+        <!-- <input name="test3" form="f1"> -->
+        <!-- <form action="https://www.baidu.com/" method="POST" target="_parent">
+            <table cellspacing="20px">
+                <tr>
+                    <td align="right">用户名：</td>
+                    <td><input name="username" type="text" required/></td>
+                </tr>
+                <tr>
+                    <td align="center">密&emsp;码：</td>
+                    <td><input name="password" type="password" required pattern="[0-9]{6-12}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button>登录</button></td>
+                </tr>
+            </table> -->
+            <!-- <p>
+                <label>用户名</label>
+                <input name="username" type="text" placeholder="请输入用户名" required />
+            </p>
+            <p>
+                <label>密&emsp;码</label>
+                <input name="password" type="password" placeholder="请输入密码" required pattern="[0-9]{6,12}" title="请输入6-12位数字" />
+            </p>
+            <p>
+                <label>邮&emsp;箱</label>
+                <input name="email" type="email" placeholder="请输入邮箱">
+            </p>
+            <p>
+                <label>网&emsp;址</label>
+                <input type="url">
+            </p>
+            <p>
+                <label>搜&emsp;索</label>
+                <input type="search">
+            </p>
+            <p>
+                <label>数&emsp;值</label>
+                <input type="number">
+            </p>
+            <p>
+                <label>电话号码</label>
+                <input type="tel">
+            </p>
+            <p>
+                <label>范&emsp;围</label>
+                <input id="rangeVal" type="range" min="0" max="100" value="50" oninput="result.value=parseInt(rangeVal.value)">
+                <label>0</label>
+                <label>100</label>
+                <label>你选择的值为：</label>
+                <output name="result" for="rangeVal"></output>
+            </p>
+            <p>
+                <label>日&emsp;期</label>
+                <input type="date">
+            </p>
+            <p>
+                <label>月&emsp;份</label>
+                <input type="mouth">
+            </p>
+            <p>
+                <label>周</label>
+                <input type="week">
+            </p>
+            <p>
+                <label>时&emsp;间</label>
+                <input type="time">
+            </p>
+            <p>
+                <label>日期时间</label>
+                <input type="datetime">
+            </p>
+            <p>
+                <label>本地日期时间</label>
+                <input type="datetime-local">
+            </p>
+            <p>
+                <label>颜&emsp;色</label>
+                <input type="color">
+            </p>
+            <p>
+                <select multiple="multiple" size="8">
+                    <optgroup label="食物">
+                        <option value="0" selected="selected">方便面</option>
+                        <option value="1">火腿肠</option>
+                        <option value="2">饼干</option>
+                    </optgroup>
+                    <optgroup label="电器">
+                        <option value="3">电视</option>
+                        <option value="4" selected="selected">冰箱</option>
+                        <option value="5">空调</option>
+                    </optgroup>
+                    <optgroup label="厨房用品">
+                        <option value="6">勺子</option>
+                        <option value="7">菜刀</option>
+                        <option value="8" selected="selected">筷子</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="提交">
+            </p>
+            <p>
+                <input list="listId" placeholder="选择你喜欢的水果">
+                <datalist id="listId">
+                    <option value="苹果"/>
+                    <option value="梨子"/>
+                    <option value="香蕉"/>
+                    <option value="橘子"/>
+                </datalist>
+            </p>
+            <p>
+                <label>互联网主流技术</label>
+                <input list="it" placeholder="选择你感兴趣的技术">
+                <datalist id="it">
+                    <option value="HTML"/>
+                    <option value="CSS"/>
+                    <option value="JavaScript"/>
+                    <option value="Java"/>
+                    <option value="C#"/>
+                    <option value="PHP"/>
+                    <option value="Objective-C"/>
+                    <option value="Swift"/>
+                    <option value="Visual Basic"/>
+                </datalist>
+            </p>
+        </!-->
+        <!-- <form oninput="result.value=firstName.value+medialName.value+lastName.value">
+            <label>设置称号：</label>
+            <input id="firstName" type="text" value="累成狗" /><br/>
+            <label>设置姓名：</label>
+            <input id="medialName" type="text" value="妄酒" /><br/>
+            <label>设置职业：</label>
+            <input id="lastName" type="text" value="仙女" /><br/>
+            <label>您是：</label>
+            <output name="result" for="firstName medialName lastName">?</output>
+        </form> -->
+        <form oninput="result.value=((parseInt(rangeVal_1.value)+parseInt(rangeVal_2.value)-parseInt(numVal_1.value))*parseInt(numVal_2.value)/parseInt(numVal_3.value))+txtVal.value">
+            <label>0</label>
+            <input id="rangeVal_1" type="range" min="0" max="100" value="30" />
+            <label>100</label>
+            <span>+</span>
+            <label>0</label>
+            <input id="rangeVal_2" type="range" min="0" max="100" value="30" />
+            <label>100</label>
+            <span>-</span>
+            <input id="numVal_1" type="number" value="15">
+            <span>x</span>
+            <input id="numVal_2" type="number" value="3">
+            <span>/</span>
+            <input id="numVal_3" type="number" value="2">
+            <span>+</span>
+            <input id="txtVal" type="text" value="只羊">
+            <span>=</span>
+            <output name="result" for="rangeVal_1 rangeVal_2 numVal_1 numVal_2 numVal_3 txtVal">?</output>
+        </form>
+        <br/>
+        <form oninput="n3.value=Number(n1.value)+Number(n2.value)">
+            <input name="n1" value="0" />
+            +
+            <input name="n2" value="0" />
+            =
+            <output name="n3">0</output>
+        </form>
+        <!-- <div>
+            <a href="#top">TOP</a>
+        </div> -->
+    </body>
+</html>

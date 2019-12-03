@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid rgb(168, 167, 167);
+        }
+
+        #but1 {
+            background: burlywood;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<form>
+    <form action="https://www.baidu.com" method="POST" target="_blank">
+        <table cellspacing="10px" cellpadding="10px" width="70%" align="center">
+            <tr bgcolor="grey">
+                <td colspan="3"><b>1、会员登录名和密码</b></td>
+            </tr>
+            <tr>
+                <td align="right" width="150px">用户名：</td>
+                <td valign="middle" width="200px">
+                    <input name="username" type="text" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <input type="button" value="检测用户名" />
+                    <span style="color: blue;"><small>5-15位，请使用英文（a-z、A-Z）数字（0-9）</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">密&emsp;码：</td>
+                <td valign="middle" width="200px">
+                    <input name="password" type="password" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <span style="color: blue;"><small>6-12位，请使用英文（a-z）、数字（0-9）注意区分大小写；密码不能与登录名相同。</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">再次输入密码：</td>
+                <td valign="middle" width="200px">
+                    <input name="password" type="password" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <span style="color: blue;"><small>两次输入的密码必须一致</small></span>
+                </td>
+            </tr>
+            <tr bgcolor="grey">
+                <td colspan="3"><b>2、姓名和联系方式</b></td>
+            </tr>
+            <tr>
+                <td align="right">真实姓名：</td>
+                <td valign="middle" width="200px">
+                    <input name="name" type="text" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <input name="gender" type="radio">男
+                    <input name="gender" type="radio">女
+                </td>
+            </tr>
+            <tr>
+                <td align="right">电子邮箱：</td>
+                <td valign="middle" width="200px">
+                    <input name="email" type="email" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <span style="color: red;"><small><b>非常重要！</b></small></span>
+                    <br />
+                    <span style="color: blue;"><small>这是客户与您联系的首选方式，请一定填写真实</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">固定电话</td>
+                <td valign="middle" width="200px">
+                    <input name="tel" type="tel" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <span style="color: blue;"><small>区号+电话号码</small></span>
+                </td>
+            </tr>
+            <tr>
+                <!--js联动未完成-->
+                <td align="right">公司所在地：</td>
+                <td colspan="2">
+                    <select style="width: 100px;">
+                        <option value="1" id="beijing">北京</option>
+                        <option value="2" id="sichuan">四川</option>
+                        <option value="3" id="chongqing">重庆</option>
+                        <option value="4" id="fujian">福建</option>
+                    </select>
+                    <select>
+                        <option value="5">东城区</option>
+                        <option value="6">朝阳区</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">街道地址：</td>
+                <td valign="middle" width="200px" colspan="2">
+                    <input name="add" type="text" required width="500px" />
+                    <span style="color: red;">*</span>
+                    <span style="color: blue;"><small>填写县（区）、街道、门牌号</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">传真号码：</td>
+                <td valign="middle" width="200px" colspan="2">
+                    <input name="tel" type="tel" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">手机号码：</td>
+                <td valign="middle" width="200px" colspan="2">
+                    <input name="tel" type="tel" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">邮政编码：</td>
+                <td valign="middle" width="200px" colspan="2">
+                    <input name="mail" type="number" />
+                </td>
+            </tr>
+            <tr bgcolor="grey">
+                <td colspan="3"><b>3、公司名称和主营业务</b></td>
+            </tr>
+            <tr>
+                <td align="right">贵公司名称：</td>
+                <td valign="middle" width="200px">
+                    <input name="name" type="text" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td>
+                    <span style="color: blue;"><small>请填写在工商局注册的公司/商号全称<br />无商号的个体经营者填写执照上的姓名，如：张三（个体经营）</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">你的职位：</td>
+                <td valign="middle" width="200px">
+                    <input name="name" type="text" required />&nbsp;
+                    <span style="color:red;">*</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">主营行业</td>
+                <td>
+                    <select style="width: 100px;">
+                        <option>电子电工</option>
+                        <option>电子</option>
+                        <option>电工</option>
+                    </select>
+                </td>
+                <td>
+                    <span style="color: blue;"><small>请正确选择。您会收到该行业、该产品的供求信息</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">主营产品/服务：</td>
+                <td valign="middle" width="200px" colspan="2">
+                    <input name="name" type="text" required />&nbsp;
+                    <span style="color:red;">*</span>
+                    <span style="color: blue;"><small>3个主要相关产品民/服务名，最少要填一个。例：太阳帽，布料，拉链</small></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">公司网址：</td>
+                <td colspan="2">
+                    <input name="url" type="url" value="http://" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <input id="but1" type="submit" value="确认提交">
+                </td>
+            </tr>
+        </table>
+    </form>
+</form>
+
+</html>

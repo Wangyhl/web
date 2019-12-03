@@ -1,0 +1,40 @@
+html {
+    background: #e3e3e3;
+}
+
+.p1 {
+    text-indent: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.p3 {
+    color: #fff;
+    text-shadow: 0 2px 1px rgba(253,76,233,.96);
+}
+
+.p4 {
+    text-align: right;
+}
+
+article {
+    background: white;
+    border: 1px solid #acacac;
+    width: 960px;
+    text-align: center;
+}
+
+.p5 {
+    line-height: 140%;
+}
+
+.p6 {
+    display: inline-block;
+    /* border: 1px solid red; */
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

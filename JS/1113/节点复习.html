@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点复习</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .red{
+            background-color: rosybrown;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">head</div>
+</body>
+<script>
+    //创建节点
+    var box = document.createElement('div');
+    //给元素添加一个class
+    box.classList.add('box');
+    //定位到body
+    var body = document.querySelector('body');
+    //把box放入body里面的最后面
+    body.append(box);
+    //把box放入body里面的最前面
+    body.prepend(box);
+    //把box放在head上面
+    var head = document.querySelector('head');
+    head.before(box);
+    //把box放在head下面
+    head.after(box);
+
+    //属性的增，删，改，查
+    //增加或修改属性
+    box.setAttribute('title','我是个盒子');
+    //删除属性
+    box.removeAttribute('title');
+    //判断属性是否存在
+    box.hasAttribute('title');
+    //获取属性
+    box.getAttribute('title');
+
+    //类操作增，删，改，查
+    // <div class="box red"><div>
+    box.classList.add('red');
+    box.classList.remove('red');
+    box.classList.contains('red');
+
+    //内容操作
+    box.innerText//获取内部所有文本
+    box.innerText = "插入一段文字" //设置文本
+    box.innerHTML //获取内部所有html
+    box.innerHTML = "<p>段落文字</p>"
+
+    //样式操作,不会改变css，会操作节点的style属性,也就是行内样式
+    // box.style.backgroundColor = "yellow"  //不是常用样式，样式一般写在css内
+    //常用classList样式格式 增/删，而不是直接设置style
+    box.classList.remove('red');
+    box.classList.add('yellow');
+
+    //删除节点
+    box.remove();
+</script>
+
+</html>

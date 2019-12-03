@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border</title>
+    <style>
+        div {
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            float: left;
+            margin: 10px;
+        }
+
+        .d1 {
+            border-width: 20px 45px 20px 45px;
+            border-style: solid;
+            border-color: transparent #d6530d transparent #d6530d;
+        }
+
+        .d2 {
+            border-width: 30px 45px 30px 45px;
+            border-style: ridge;
+            border-color: #0dd690 transparent #0dd690 transparent;
+        }
+
+        .d3 {
+            border-width: 90px 45px 0 45px;
+            border-style: double;
+            border-color: #543fc7 transparent transparent transparent;
+        }
+
+        .d4 {
+            border-width: 30px 60px 30px 60px;
+            border-style: ridge;
+            border-color: transparent transparent #e2187d #e2187d;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip</title>
+    <style>
+        section {
+            background-color: rgb(25, 122, 151);
+            background-image: url("./img/beijing.JPG");
+            /* background-size: contain; */
+            background-repeat: no-repeat;
+            float: left;
+            border: 15px dotted rgb(23, 94, 23);
+            width: 260px;
+            height: 180px;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .img1 {
+            background-clip: border-box;
+        }
+
+        .img2 {
+            background-clip: padding-box;
+        }
+
+        .img3 {
+            background-clip: content-box;
+        }
+
+        .img4 {
+            background-origin: border-box;
+        }
+
+        .img5 {
+            background-origin: padding-box;
+        }
+
+        .img6 {
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <section class="img1"></section>
+    <section class="img2"></section>
+    <section class="img3"></section>
+    <section class="img4"></section>
+    <section class="img5"></section>
+    <section class="img6"></section>
+</body>
+</html>

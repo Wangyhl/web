@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深浅拷贝</title>
+</head>
+<body>
+    <script>
+        //浅拷贝,只拷贝地址
+        //基本数据类型，栈内存
+        var x = "1";
+        var y = x;
+        x = "3";
+
+        //引用类型，堆内存
+        //可以改变原来的值
+        var a = [1,2,3];
+        var b = a;
+        b[0] = "e";
+
+        //深拷贝，值相同但不相等
+        let obj1 = {name: "李狗蛋"};
+        let obj2 = {name: "李狗蛋"};
+        let obj3 = obj1;
+        //比较obj1和obj2的地址，也就是指针
+        obj1 == obj2; //false
+        obj1 == obj3; //true
+
+        //改变值的情况下不改变原来的值
+        var array = [1,2,3];
+        var arrayCopy = [];
+        array.forEach(function(el,index){
+            arrayCopy[index] = el;
+        })
+
+        //上面的写法用于嵌套类型会有错
+        var array1 = [[1,2],3,["a","b"]];
+        var arrayCopy1 = [];
+        //用josn模块实现深拷贝
+        //把array1对象转换为一个字符串
+        var arrayCopyStr = JSON.stringify(array1);
+        //再把字符串解析为一个对象
+        var array1Copy1 = JSON.parse(arrayCopyStr);
+
+        //包装成函数类型
+        function jsonDeepCopy(obj){
+            let objStr = JSON.stringify(obj);
+            return JSON.parse(objStr);
+        }
+        a1 = {x:1,y:2};
+        a2 = jsonDeepCopy(a1);
+        //比较a1和a2的值，如果为false，则深拷贝成功
+
+        //Object.assign实现深拷贝
+        let o1 = {hello:"word"};
+        let o2 = {hi: "lilei"};
+        //把o2的值复制给o1，此时改变o2，o1不会改变
+        Object.assign(o1,o2);
+
+        let x1 = {};
+        let x2 = {name:"lily",age:20};
+        Object.assign(x1,x2);
+
+        //封装函数
+        function assignDeepCopy(obj){
+            return Object.assign({},obj);
+        }
+        let lucy = {name:"lucy",age:23};
+        let lucyCopy = assignDeepCopy(lucy);
+
+    </script>
+</body>
+</html>

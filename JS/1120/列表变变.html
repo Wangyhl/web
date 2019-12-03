@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表变</title>
+    <style>
+        .box {
+            width: 200px;
+            border: 1px solid #aaa;
+            margin: 10px auto;
+        }
+        h2 {
+            background-color: #CED3D7;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            padding-left: 10px;
+            line-height: 30px;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        li {
+            width: 200px;
+            margin: 0 auto;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: #6B7980;
+            font-size: 12px;
+            background-color: #e9edf2;
+            line-height: 25px;
+            padding: 0 10px;
+        }
+        li>a:hover{
+            text-decoration: underline;
+        }
+        .ul-heig {
+            height: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>播放列表...</h2>
+        <ul>
+            <li><a href="">玩家之徒 - 蔡依林</a></li>
+            <li><a href="">原谅我就是这样的女生 - 戴佩妮</a></li>
+            <li><a href="">猜不透 - 丁当</a></li>
+            <li><a href="">自导自演 - 周杰伦</a></li>
+            <li><a href="">浪漫窝 - 弦子</a></li>
+            <li><a href="">流年 - 王菲</a></li>
+        </ul>
+    </div>
+    <script>
+        //页面加载完毕后执行的代码
+        window.onload = function(){
+            var play = document.querySelector(".box>h2");
+            var ul = document.querySelector(".box>ul");
+
+            play.onclick = function(){
+                ul.classList.add("ul-heig");
+                // ul.classList.remove("ul-heig");
+            }
+        }
+    </script>
+</body>
+</html>

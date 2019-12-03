@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮</title>
+    <style>
+        .btn {
+            display: block;
+            width: 124px;
+            height: 64px;
+            /* background: gray; */
+            border-radius: 30px;
+            padding: 2px 2px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .btn input {
+            display: none;
+        }
+
+        .btn .maru {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            transition: all 0.5s;
+        }
+
+        .btn .bg {
+            width: 124px;
+            height: 64px;
+            background: gray;
+            border-radius: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+
+        .btn input:checked+.maru {
+            transform: translateX(60px);
+        }
+
+        .btn input:checked~.bg {
+            background: brown;
+        }
+
+        /* 第二弹 */
+        .bg1 {
+            width: 124px;
+            height: 64px;
+            background: gray;
+            /* border-radius: 30px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+
+        .btn .maru1 {
+            width: 60px;
+            height: 60px;
+            /* border-radius: 50%; */
+            background: white;
+            transition: all 0.5s;
+        }
+
+        .btn input:checked+.maru1 {
+            transform: translateX(60px);
+        }
+
+        .btn input:checked~.bg1 {
+            background: brown;
+        }
+
+        /* 第三弹 */
+        .btn .maru2 {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid gray;
+            transition: all 0.5s;
+        }
+
+        .btn .bg2 {
+            width: 124px;
+            height: 34px;
+            background: gray;
+            border-radius: 30px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+
+        .btn input:checked+.maru2 {
+            transform: translateX(60px);
+            background: rgb(255, 255, 255);
+        }
+
+        .btn input:checked~.bg2 {
+            background: rgb(113, 241, 108);
+        }
+    </style>
+</head>
+
+<body>
+    <label for="switch" class="btn">
+        <input type="checkbox" id="switch">
+        <div class="maru"></div>
+        <div class="bg"></div>
+    </label>
+    <hr>
+    <label for="switch1" class="btn">
+        <input type="checkbox" id="switch1">
+        <div class="maru1"></div>
+        <div class="bg1"></div>
+    </label>
+    <hr>
+    <label for="switch2" class="btn">
+        <input type="checkbox" id="switch2">
+        <div class="maru2"></div>
+        <div class="bg2"></div>
+    </label>
+</body>
+
+</html>

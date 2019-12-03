@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>立方体</title>
+    <style>
+        #box1 {
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+        #box {
+            width: 400px;
+            height: 400px;
+            background: indianred;
+            transform: rotateX(50deg) rotateY(50deg);
+            transform-style: preserve-3d;
+            position: relative;
+            margin: 0 auto;
+            /* animation: zhuan 6s linear infinite; */
+        }
+
+        .face {
+            width: 200px;
+            height: 200px;
+            background: brown;
+            border: 1px solid black;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            line-height: 200px;
+            text-align: center;
+            font-size: 2em;
+            opacity: 0.8;
+            transition: transform 1s;
+        }
+
+        .front {
+            transform: translateZ(100px);
+            background: crimson;
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+            background: rgb(220, 183, 20);
+        }
+
+        .buttom {
+            transform: rotateX(-90deg) translateZ(100px);
+            background: rgb(150, 220, 20);
+        }
+
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+            background: rgb(20, 220, 193);
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+            background: rgb(20, 100, 220);
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+            background: rgb(220, 20, 220);
+        }
+
+        /* @keyframes zhuan {
+            from {
+                transform: rotateX(360deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(0deg) rotateY(360deg);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <div id="box">
+            <div class="face front">
+                Font
+            </div>
+            <div class="face top">
+                Top
+            </div>
+            <div class="face buttom">
+                Buttom
+            </div>
+            <div class="face back">
+                Back
+            </div>
+            <div class="face left">
+                Left
+            </div>
+            <div class="face right">
+                Right
+            </div>
+        </div>
+    </div>
+    <script src="js/立方体.js"></script>
+</body>
+
+</html>

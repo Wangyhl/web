@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象继承</title>
+</head>
+<body>
+    <script>
+        //apply方法
+        function Country(name,age){
+            this.name = name;
+            this.age = age;
+            this.country = "China";
+            this.sayHi = function(){
+                console.log(`我是${this.name}`);
+            }
+        }
+        function Student(name,age,grad){
+            Country.apply(this,arguments);
+            this.grad = grad;
+        }
+        let stu = new Student("李雷",10,5);
+
+        //prototype:用于给内置对象添加一些属性或方法
+        //一、添加属性
+        function Person(c){
+            this.c = c;
+        }
+        function Teacher(name,major){
+            this.name = name;
+            this.major = major;
+        }
+        Teacher.prototype = new Person("China");
+        Teacher.prototype.constructor = Teacher;
+        let zs = new Teacher("张三");
+        let zyl = new Teacher("张云雷","相声演员");
+
+        //二、添加函数
+        var arr = [3,2,6,1,4]
+        Array.prototype.name = "数组";
+        Array.prototype.min = function(){
+            //sort()方法会改变原数组，不推荐使用
+            // var tem = this.sort(function(a,b){return a-b})
+            // return tem[0]
+            for(var i = 0; i < this.length-1; i++){
+                let m;
+                if(this[i] < this[i+1]){
+                    m = this[i];
+                    // console.log(m);
+                    this[i] = this[i+1];
+                    this[i+1] = m;
+                }
+            }
+            return this[this.length-1];
+        }
+    </script>
+</body>
+</html>

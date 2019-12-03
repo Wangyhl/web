@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>加密与解密</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 250px;
+            background-color: rgb(235, 229, 229);
+            margin: 0 auto;
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            margin: 20px 0 0;
+            line-height: 50px;
+            /* border: 1px solid steelblue; */
+        }
+        #code-num {
+            width: 250px;
+            height: 25px;
+        }
+        input {
+            width: 200px;
+            height: 25px;
+            font-size: 16px;
+            outline: none;
+        }
+        button {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="in-num">输入文字：</label>
+        <input type="text" id="in-num">
+        <button onclick="getCode()">加密</button>
+        <br>
+        <label for="code-num">密文：</label>
+        <input type="text" id="code-num">
+        <br>
+        <label for="out-num">原文：</label>
+        <input type="text" id="out-num">
+        <button onclick="motomoCode()">解密</button>
+    </div>
+
+    <script>
+        //3个input，第一个显示正常输入文字
+        //第二个显示加密后的文字
+        //第三个显示截解密后的文字
+    var inNumEle = document.getElementById("in-num");
+    var codeNumEle = document.getElementById("code-num");
+    var outNumEle = document.getElementById("out-num");
+    function getCode(){
+        var inNum = inNumEle.value;
+        // console.log("输入："+inNum)
+        var codeNumOut = "";
+        for(i of inNum){
+            var inNumCode = i.charCodeAt();
+            console.log(inNumCode)
+            var codeNum = inNumCode+15;
+            var codeNums = String.fromCharCode(codeNum);
+            codeNumOut += codeNums;
+            // console.log("密文拼接："+codeNumOut);
+        }
+        codeNumEle.value = codeNumOut;
+    }
+
+    function motomoCode(){
+        var codeNum2 = codeNumEle.value;
+        // console.log("再次获取密文："+codeNum2);
+        var outNumEleCode = "";
+        for(j of codeNum2){
+            var outNumCode = j.charCodeAt();
+            var outNum = outNumCode - 15;
+            var outNums = String.fromCharCode(outNum);
+            outNumEleCode += outNums;
+            // console.log("原文拼接："+outNumEleCode);
+        }
+        outNumEle.value = outNumEleCode;
+    }
+    </script>
+</body>
+</html>

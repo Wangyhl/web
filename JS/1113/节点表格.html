@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <style>
+        table,thead,tbody,th,td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="user-info">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>学校</th>
+                <th>简介</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+        <script>
+            //获取tbody
+            var tbody = document.querySelector("#user-info tbody");
+
+            var users = [
+                {
+                    name: "李大锤",
+                    age: 20,
+                    school: "蓝翔技校",
+                    profile: "挖掘机技术我最强"
+                },
+                {
+                    name: "王尼玛",
+                    age: 23,
+                    school: "新东方烹饪学校",
+                    profile: "烹饪技术哪家强"
+                },
+                {
+                    name: "泷泽萝拉",
+                    age: 23,
+                    school: "tokyo hot",
+                    profile: "abcd"
+                }
+            ]
+
+            //for循环
+                // var listHtml = "";
+        //    for(i = 0; i < users.length; i++){
+        //        //获取对象列表
+        //        var user = users[i];
+        //        //定义插入内容
+        //        var html = `<tr>
+        //             <td>${user.name}</td>
+        //             <td>${user.age}</td>
+        //             <td>${user.school}</td>
+        //             <td>${user.profile}</td>
+        //         </tr>`
+        //         //在tbody中插入定义的内容
+        //         tbody.innerHTML += html;
+        //         // listHtml += html;
+        //         // tbody.innerHTML = listHtml;
+        //    }
+
+        //for in遍历方式
+           for(i in users){
+               var user = users[i]
+               var html = `<tr>
+                    <td>${user.name}</td>
+                    <td>${user.age}</td>
+                    <td>${user.school}</td>
+                    <td>${user.profile}</td>
+                </tr>`
+                //在tbody中插入定义的内容
+                tbody.innerHTML += html;
+           }
+        </script>
+    </table>
+</body>
+
+</html>

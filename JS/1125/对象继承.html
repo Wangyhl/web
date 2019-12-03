@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Schooler(name,age){
+        //     this.name = name
+        //     this.age = age
+
+        // }
+        // function Teacher(name,age,grad){
+        //     this.grad = grad
+        //     Schooler.apply(this,arguments)
+        // }
+        // function Student(name,age,job){
+        //     this.job = job
+        //     Schooler.apply(this,arguments)
+        // }
+        // let t1 = new Teacher('zhao',30,'数学')
+        // let s1 = new Student('li',12,6)
+        // function Student(name,age ,grad){
+        //     this.school = "清华大学附小"
+        //     this.name = name
+        //     this.age = age
+        //     this.grad = grad
+        // }
+        // function Teacher(name,age,job){
+        //     this.school = "清华大学附小"
+        //     this.name = name
+        //     this.age = age
+        //     this.job = job
+        // }
+        // let s1 = new Student('李磊',11,5)
+        // let t1 = new Teacher('王刚',30,'数学')
+
+        function Schooler(name,age){
+            this.name = name
+            this.age = age
+            this.school = "清华大学附小"
+            this.say = function(){
+                console.log(`我是${this.name}`)
+            }
+        }
+
+        function Student(name,age ,grad){
+            Schooler.apply(this,arguments)
+            this.grad = grad
+
+        }
+        function Teacher(name,age,job){
+            Schooler.apply(this,arguments)
+            this.job = job
+        }
+        let s1 = new Student('李磊',11,5)
+        let t1 = new Teacher('王刚',30,'数学')
+
+        function Person(c){
+            this.c = c
+        }
+
+        function Chi(name){
+            // this.c = "chines"
+            this.name = name
+        }
+        //Chi.prototype.c = "chines"
+        Chi.prototype = new Person("中国")
+        Chi.prototype.constructor = Chi
+
+        let zs = new Chi('赵四')
+        let ln = new Chi('刘能')
+
+        var arr1 = [1,2,3]
+        var arr2 = [8,3,5,9,1,7]
+        // arr1.max()
+
+        Array.prototype.name = "数组"
+        Array.prototype.min = function(){
+            // var tem = this.sort(function(a,b){return a-b})
+            // return tem[0]
+            for(var i=0;i<this.length-1;i++){
+                let m;
+                //比较两个相邻的数，把小的放在右边
+                if(this[i] <this[i+1] ){
+                    //交换 this[i] 和 this[i+1]的值
+                    m = this[i]
+                    this[i] = this[i+1]
+                    this[i+1] = m
+                }
+            }
+            return this[this.length-1]
+        }
+
+    </script>
+
+</body>
+</html>

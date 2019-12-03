@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>层次</title>
+    <style>
+        .mainbox {
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .waiceng,.neiceng,.neiceng2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .neiceng {
+            background: blueviolet;
+            position: absolute;
+            z-index: 9999;
+        }
+
+        .neiceng2 {
+            background: blue;
+            z-index: 0;
+            position: relative;
+            top: -50px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        最外层
+        <div class="waiceng">
+            外层
+            <div class="neiceng">
+                内层
+            </div>
+            <div class="neiceng2">
+                内层2
+            </div>
+        </div>
+    </div>
+</body>
+</html>

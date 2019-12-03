@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 600px;
+            text-align: center;
+        }
+        table,tr,td {
+            border: 1px solid black;
+        }
+        .num {
+            text-align: center;
+        }
+        .text {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="5px">
+        <tr style="text-align: center;">
+            <td rowspan="2">序号</td>
+            <td rowspan="2">检查细则</td>
+            <td colspan="4">等级</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td>优</td>
+            <td>良</td>
+            <td>中</td>
+            <td>差</td>
+        </tr>
+        <tr>
+            <td class="num">1</td>
+            <td class="text">玻璃门窗及镜面是否清洁，是否无灰尘无裂痕</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td class="num">2</td>
+            <td class="text">窗框、工作台、桌椅是否无灰尘和污渍</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td class="num">3</td>
+            <td class="text">地板有无碎屑及污痕</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td class="num">4</td>
+            <td class="text">墙面有无污痕或破损处</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td class="num">5</td>
+            <td class="text">盆景花卉有无枯萎带灰尘现象</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

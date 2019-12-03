@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习</title>
+</head>
+<body>
+    <div class="box"></div>
+    <form action="">
+        <input type="text" id="user" placeholder="请输入hello">
+        <button onclick="dianji()">点我呀</button>
+    </form>
+</body>
+<script>
+    // 使用For循环添加10个p标签到div中。【练习innerHTML】
+    var html = "";
+    for(i =1; i <= 10; i++){
+        var pList = `<p>这是个p${i}</p>`;
+        html += pList;
+    }
+    var box = document.querySelector(".box");
+    box.innerHTML = html;
+
+    // 获取起点小说网/360图书馆不可复制页面的文字。【练习innerText】,在网站控制台操作
+    // var html = document.querySelector("body")
+    // html.innerText
+
+    // 创建一个表单，表单中一个input,一个按钮，当用户在input中输入内容并且点击按钮后验证输入的值是否为hello,并弹框提示结果是否正确【练习获取input的value】
+        var input = document.querySelector("#user");
+        function dianji(){
+            if(input.value == "hello"){
+                alert("通过验证")
+            }else{
+                alert("无效")
+            }
+        }
+</script>
+</html>
