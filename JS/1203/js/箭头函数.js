@@ -2,7 +2,7 @@
 let hi = function(){
 
 }
-//箭头函数
+//1、箭头函数
 //当参数为一个时圆括号可以省略
 // let hello = name => {}
 let hello = (name) => {
@@ -15,7 +15,7 @@ let hello = (name) => {
 //     return a + b;
 // }
 
-//闭包
+//2、闭包
 //读取局部变量
 let x = 10;
 function fn(){
@@ -39,7 +39,7 @@ function getName(callback){
     }, 3000);
 }
 
-//Object.difneProperty
+//3、Object.difneProperty
 //类型判断，抛出异常
 //希望某个属性不可更改时
 //typescript => 类型检测 => ES5 => 面试题级别 => 中级工程师
@@ -75,7 +75,7 @@ stu.age = '26';
 console.log(stu.age)
 
 
-//深拷贝
+//4、深拷贝
 let o1 = {
     name:"木子李",
     age: 29,
@@ -87,3 +87,12 @@ let o2 = Object.assign({},o1,{//值拷贝
 o2.major.push("语文");
 console.log(o1.major);
 console.log(o2.major);
+
+//5、事件代理
+
+
+//6、递归函数 => 在函数内部调用自身，容易陷入死循环
+//常用于 n! = 5 x 4 x 3 x 2 x 1
+
+//表单验证
+// tips.className = (/^\w{4,8}$/.test(value)) ? "ipt" : "ipt error"

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客户端</title>
+</head>
+<body>
+    <script>
+        //通过ES6的fetch方法发送ajax请求
+        //当服务器请求端口时会触发then方法
+        //通过post访问
+        fetch("http://10.2.1.8:8081/login",{
+            method: "POST",
+            //将账号密码以JSON数据格式发送给服务端
+            body: JSON.stringify({
+                username:"admin",
+                password:"123"
+            }),
+            //设置请求头
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }).then(res => {
+            //处理json
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        });
+        //通过GET调用，通过拼接传参
+        fetch("http://10.2.1.8:8081/orders").then(res => {
+            //处理json
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        });
+    </script>
+</body>
+</html>
